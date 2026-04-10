@@ -98,6 +98,7 @@
         "sold_by": "GoPro",
         "current_price": 959.00,
         "previous_price": 2059.00,
+        "discount": 41,
         "total_selling": 7,
         "image": "https://i.ibb.co.com/MkPd0f6Z/popularproduct2.jpg",
         "hovered_image": "https://i.ibb.co.com/fdkMxmhd/popularproduct-hover2.jpg"
