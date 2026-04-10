@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+.quicksand-font {
+  font-family: "Quicksand", sans-serif;
+}
+
+.debug{
+  border: 2px solid red;
+}
+
+.container{
+  max-width: 1500px;
+  margin: auto;
+}

@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "product_name": "Blue Diamond Almonds Lightly",
+        "category": "Diet food",
+        "total_rating": 4.5,
+        "total_reviews": 10,
+        "sold_by": "Global Store",
+        "current_price": 282.00,
+        "previous_price": 807.00,
+        "discount": 65,
+        "total_selling": 6,
+        "image": "https://i.ibb.co.com/KcNZHq0J/popularproduct-hover1.jpg",
+        "hovered_image": "https://i.ibb.co.com/VWYcsGS2/popularproduct1.jpg"
+    },
+
+    {
+        "id": 2,
+        "product_name": "Canada Dry Ginger Ale – 2L Bottle",
+        "category": "Pet food",
+        "total_rating": 4.5,
+        "total_reviews": 10,
+        "sold_by": "Global Store",
+        "current_price": 810.00,
+        "previous_price": 1810.00,
+        "tag": "Sale",
+        "total_selling": 6,
+        "image": "https://i.ibb.co.com/MkPd0f6Z/popularproduct2.jpg",
+        "hovered_image": "https://i.ibb.co.com/fdkMxmhd/popularproduct-hover2.jpg"
+    },
+
+    {
+        "id": 3,
+        "product_name": "Gorton’s Beer Battered Fish Fillets",
+        "category": "Diet food",
+        "total_rating": 4,
+        "total_reviews": 10,
+        "sold_by": "GoPro",
+        "current_price": 708.00,
+        "previous_price": 1314.00,
+        "tag": "Hot",
+        "total_selling": 8,
+        "image": "https://i.ibb.co.com/dwnBbdKN/popularproduct3.jpg",
+        "hovered_image": "https://i.ibb.co.com/F4yTZHMN/popularproduct-hover3.jpg"
+    },
+
+    {
+        "id": 4,
+        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "category": "Coffee & Teas",
+        "total_rating": 4,
+        "total_reviews": 10,
+        "sold_by": "GoPro",
+        "current_price": 1012.00,
+        "previous_price": 1074.00,
+        "discount": 5,
+        "total_selling": 3,
+        "image": "https://i.ibb.co.com/gbH6wZDD/popularproduct4.jpg",
+        "hovered_image": "https://i.ibb.co.com/3XjDPxm/popularproduct-hover4.jpg"
+    },
+
+    {
+        "id": 5,
+        "product_name": "Pepperidge Farm Farmhouse Hearty White Bread",
+        "category": "Diet food",
+        "total_rating": 4,
+        "total_reviews": 10,
+        "sold_by": "GoPro",
+        "current_price": 85.00,
+        "previous_price": 363.00,
+        "discount": 76,
+        "total_selling": 2,
+        "image": "https://i.ibb.co.com/TB9FNXR6/popularproduct5.jpg",
+        "hovered_image": "https://i.ibb.co.com/5hX9CXYg/popularproduct-hover5.jpg"
+    },
+
+    {
+        "id": 6,
+        "product_name": "Oroweat Country Buttermilk Bread",
+        "category": "Pet food",
+        "total_rating": 4.5,
+        "total_reviews": 10,
+        "sold_by": "Global Store",
+        "current_price": 160.00,
+        "previous_price": 850.00,
+        "tag": "Hot",
+        "total_selling": 6,
+        "image": "https://i.ibb.co.com/KcNZHq0J/popularproduct-hover1.jpg",
+        "hovered_image": "https://i.ibb.co.com/VWYcsGS2/popularproduct1.jpg"
+    },
+
+    {
+        "id": 7,
+        "product_name": "Angie’s Boomchickapop Sweet & Salty Kettle Corn",
+        "category": "Diet food",
+        "total_rating": 4.5,
+        "total_reviews": 10,
+        "sold_by": "GoPro",
+        "current_price": 959.00,
+        "previous_price": 2059.00,
+        "total_selling": 7,
+        "image": "https://i.ibb.co.com/MkPd0f6Z/popularproduct2.jpg",
+        "hovered_image": "https://i.ibb.co.com/fdkMxmhd/popularproduct-hover2.jpg"
+    },
+
+    {
+        "id": 8,
+        "product_name": "Simply Lemonade with Raspberry Juice",
+        "category": "Cake & Milk",
+        "total_rating": 3,
+        "total_reviews": 10,
+        "sold_by": "Global Store",
+        "current_price": 215.00,
+        "previous_price": 366.00,
+        "discount": 41,
+        "total_selling": 5,
+        "image": "https://i.ibb.co.com/dwnBbdKN/popularproduct3.jpg",
+        "hovered_image": "https://i.ibb.co.com/F4yTZHMN/popularproduct-hover3.jpg"
+    },
+
+    {
+        "id": 9,
+        "product_name": "Chen Watermelon",
+        "category": "Diet food",
+        "total_rating": 4.5,
+        "total_reviews": 10,
+        "sold_by": "Global Store",
+        "current_price": 70.00,
+        "previous_price": 942.00,
+        "tag": "New",
+        "total_selling": 4,
+        "image": "https://i.ibb.co.com/gbH6wZDD/popularproduct4.jpg",
+        "hovered_image": "https://i.ibb.co.com/3XjDPxm/popularproduct-hover4.jpg"
+    },
+
+    {
+        "id": 10,
+        "product_name": "Colorful Banana",
+        "category": "Pt food",
+        "total_rating": 3.5,
+        "total_reviews": 10,
+        "sold_by": "GoPro",
+        "current_price": 551.00,
+        "previous_price": 1429.00,
+        "discount": 61,
+        "total_selling": 3,
+        "image": "https://i.ibb.co.com/TB9FNXR6/popularproduct5.jpg",
+        "hovered_image": "https://i.ibb.co.com/5hX9CXYg/popularproduct-hover5.jpg"
+    }
+]

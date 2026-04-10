@@ -1,0 +1,34 @@
+.banner_section{
+  background-image: url("../assets/bannerBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_one{
+  background-image: url("../assets/bannerImg1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_two{
+  background-image: url("../assets/bannerImg2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner_three{
+  background-image: url("../assets/bannerImg3.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1D8751;
+}
