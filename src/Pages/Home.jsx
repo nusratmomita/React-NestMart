@@ -7,6 +7,7 @@ import DailyBestSells from '../Components/DailyBestSells'
 import DealsOfTheDay from '../Components/DealsOfTheDay/DealsOfTheDay'
 import FourTypesProduct from '../Components/FourTypesProduct'
 import ShopByCategory from '../Components/ShopByCategory/ShopByCategory'
+import Testimonials from '../Components/Testimonials'
 
 const Home = () => {
   const popularProducts = useLoaderData();
@@ -22,6 +23,7 @@ const Home = () => {
       <DealsOfTheDay/>
       <FourTypesProduct/>
       <ShopByCategory/>
+      <Testimonials/>
     </div>
   )
 }
