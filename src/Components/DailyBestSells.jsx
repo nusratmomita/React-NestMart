@@ -1,12 +1,11 @@
 import React from 'react'
 import DailyBestSellsImage from './DailyBestSells/DailyBestSellsImage'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { EffectFade } from 'swiper/modules';
 import { Autoplay } from 'swiper/modules';
 import ProductCard from './ProductCard/ProductCard'
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -44,11 +43,11 @@ const DailyBestSells = ({popularProductsData}) => {
           </Swiper>
           <div className="daily_prod_swiper_nav flex gap-3 mt-4">
             <button className="product-swiper-btn-prev bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] left-3 z-100">
-              <FaArrowLeftLong className='w-8 h-8 p-2 group-hover:text-white'/>
+              <FaArrowLeftLong className='w-8 h-8 p-2 group-hover:text-white text-[#4c4c4c]'/>
             </button>
 
             <button className="product-swiper-btn-next bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] right-3 z-100">
-              <FaArrowRightLong className='w-8 h-8 p-2 group-hover:text-white'/>
+              <FaArrowRightLong className='w-8 h-8 p-2 group-hover:text-white text-[#4c4c4c]'/>
             </button>
           </div>
         </div>
