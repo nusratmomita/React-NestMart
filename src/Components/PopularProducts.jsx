@@ -13,7 +13,7 @@ const PopularProducts = ({popularProductsData}) => {
       <div className='grid grid-cols-2 lg:grid-cols-5 gap-5'>
         {
           popularProductsData.map((product) => (
-            <ProductCard product={product} style1={true} companyName={true}/>
+            <ProductCard key={product.id} product={product} style1={true} companyName={true}/>
           ))
         }
       </div>
