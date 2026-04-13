@@ -19,7 +19,6 @@
 
 .section_title{
   border-bottom: 1px solid #ececec;
-  font-size: 24px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -32,4 +31,13 @@
   left: 0;
   position: absolute;
   width: 80px;
+}
+
+.newsletter_section{
+  background-image: url("./assets/newsletterBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 84px 70px;
+  border-radius: 20px;
+  min-height: 350px;
 }

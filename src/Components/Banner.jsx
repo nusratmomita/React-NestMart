@@ -43,16 +43,16 @@ const Banner = () => {
                                 </h4>
 
                                 <div className='mt-10 relative w-105'>
-                                <div className='flex items-center gap-2 bg-white w-full p-4 rounded-4xl'>
-                                    <IoIosSend className='text-[#4c4c4c]'/>
-                                    <input type="email" placeholder='Enter Your Email' className='text-sm outline-none'/>
-                                </div>
+                                    <div className='flex items-center gap-2 bg-white w-full p-4 rounded-4xl'>
+                                        <IoIosSend className='text-[#4c4c4c]'/>
+                                        <input type="email" placeholder='Enter Your Email' className='text-[16px] outline-none'/>
+                                    </div>
 
-                                <div className='absolute top-0 right-0 mt-px'>
-                                    <button className='bg-[#1D8751] text-white p-2 rounded-3xl w-32.5 h-12.5 text-xl font-semibold'>
-                                    Subscribe
-                                    </button>
-                                </div>
+                                    <div className='absolute top-0 right-0 mt-px'>
+                                        <button className='bg-[#1D8751] text-white p-2 rounded-3xl w-32.5 h-12.5 text-xl font-semibold'>
+                                        Subscribe
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>
