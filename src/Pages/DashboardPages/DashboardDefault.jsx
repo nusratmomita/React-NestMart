@@ -95,7 +95,7 @@ const DashboardDefault = () => {
                 </ResponsiveContainer>
             </div>
 
-            <div className="bg-white p-4 rounded-xl shadow mt-6 overflow-x-auto mt-10">
+            <div className="bg-white p-4 rounded-xl shadow overflow-x-auto mt-10">
                 <h2 className="text-xl font-bold mb-4">Product Details</h2>
 
                 <table className="w-full text-sm text-left border border-gray-200">

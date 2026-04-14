@@ -11,7 +11,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
             <div className='relative'>
                 {
                     product?.image &&
-                    <img src={product.image} alt="product image" className='pl-5 pr-5' />
+                    <img src={product.image} alt="product image" className='xl:pl-5 xl:pr-5' />
                 }
 
                 <div>
@@ -59,7 +59,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                 }
                 {
                     companyName ? 
-                        <div className='flex items-center'>
+                        <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row xl:items-center'>
                             <div className='my-1.25 flex'>
                                 {[1,2,3,4,5].map((star) => {
                                     if (star <= Math.floor(product?.total_rating)) {
@@ -75,7 +75,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                         </div>
                         :
                         <div className='flex items-center my-3'>
-                            <div className='flex'>
+                            <div className='flex '>
                                 {[1,2,3,4,5].map((star) => {
                                     if (star <= Math.floor(product?.total_rating)) {
                                     return <FaStar key={star} className='text-[#fdc040] text-sm' />;
@@ -98,7 +98,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                     :
                     ""
                 }
-                <div className='flex justify-between mb-6'>
+                <div className='flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between mb-6'>
                     {
                         price_side_by_side ? 
                         <div className='flex items-center gap-2 mt-4'>

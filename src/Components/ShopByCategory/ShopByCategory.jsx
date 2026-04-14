@@ -81,8 +81,8 @@ const ShopByCategory = () => {
 
     return (
         <div className='container'>
-            <div className='flex justify-between items-center'>
-                <h3 className='text-[32px] font-bold text-[#253D4E] mt-10'>Shop By Category</h3>
+            <div className='flex justify-between items-center mt-10 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
+                <h3 className='text-[32px] font-bold text-[#253D4E]'>Shop By Category</h3>
                 <div className="category_swiper_nav inline-block">
                     <button className="category-swiper-btn-prev mr-3 bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer">
                         <FaArrowLeftLong className='w-8 h-8 p-2 group-hover:text-white text-[#4c4c4c]'/>
@@ -93,7 +93,7 @@ const ShopByCategory = () => {
                     </button>
                 </div>
             </div>
-            <div className='relative'>
+            <div className='relative px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 '>
                 <Swiper
                     slidesPerView={8}
                     spaceBetween={20}
@@ -103,7 +103,8 @@ const ShopByCategory = () => {
                         prevEl: ".category-swiper-btn-prev"
                     }}
                     breakpoints={{
-                        640: { slidesPerView: 2 },
+                        320: { slidesPerView: 2},
+                        640: { slidesPerView: 3 },
                         768: { slidesPerView: 4 },
                         1024: { slidesPerView: 8 },
                     }}

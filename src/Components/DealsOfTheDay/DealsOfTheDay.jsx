@@ -73,7 +73,7 @@ const DealsOfTheDay = ({popularProducts}) => {
     
     return (
       <div className='container'>
-        <h3 className='text-[32px] font-bold text-[#253D4E] mt-10'>Deals Of The Day</h3>
+        <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Deals Of The Day</h3>
         {/* <div>
           {
               popularProducts.map((product) => (
@@ -81,7 +81,7 @@ const DealsOfTheDay = ({popularProducts}) => {
               ))
           }
         </div> */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-30 md:gap-15 lg:gap-10 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
           { 
               DailyBestSellsData.map((product) => {
 
@@ -95,13 +95,13 @@ const DealsOfTheDay = ({popularProducts}) => {
                   return(
                     <div key={product.id} className='relative cursor-pointer group'>
                       <img className='rounded-[15px] object-cover' src={product.dealOfTheDayImage} alt="dealOfTheDayImage" />
-                      <div className=''>
+                      <div className='relativee'>
                         <div className='flex justify-center items-center'>
                           <Countdown 
                             date={targetDate}
                             renderer={({ days, hours, minutes, seconds }) => {
                                 return (
-                                  <div className="flex gap-2 justify-center mb-4 absolute top-35 transform transition duration-300 group-hover:-translate-y-3">
+                                  <div className="flex gap-2 justify-center mb-4 absolute top-25 2xl:top-35 transform transition duration-300 group-hover:-translate-y-3 px-5">
                                     <div className="bg-white px-2 py-1 rounded text-xl text-[#1d8751] font-medium text-center">{days} 
                                       <br />
                                       <span className='text-[#707070] font-medium'>Days</span>
@@ -126,7 +126,7 @@ const DealsOfTheDay = ({popularProducts}) => {
                         </div>
 
                         <div className='flex justify-center items-center'>
-                          <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,0.05)] rounded-[10px] px-7.5 py-6.25 absolute top-55 w-full max-w-[86%] transform transition duration-300 group-hover:-translate-y-3'>
+                          <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,0.05)] rounded-[10px] px-7.5 py-6.25 absolute top-45 2xl:top-55 w-full max-w-[86%] transform transition duration-300 group-hover:-translate-y-3'>
                             <h4 className='truncate text-[16px] font-bold text-[#253d4e] mb-6' title={product?.product_name}>{product.product_name}</h4>
                             <div className='flex items-center'>
                                 <div className='my-1.25 flex'>

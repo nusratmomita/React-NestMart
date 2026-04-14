@@ -14,8 +14,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const DailyBestSells = ({popularProductsData}) => {
   return (
     <div className='container'>
-      <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 mb-10'>Daily Best Sells</h3>
-      <div className='flex gap-5 flex-col lg:flex-row'>
+      <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 mb-10 px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Daily Best Sells</h3>
+      <div className='flex gap-5 flex-col lg:flex-row px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
         <div className='w-full lg:w-[25%]'>
           <DailyBestSellsImage/>
         </div>
@@ -31,6 +31,12 @@ const DailyBestSells = ({popularProductsData}) => {
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
+            }}
+            breakpoints={{
+                320: {slidesPerView: 1},
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
             }}
           >
             {

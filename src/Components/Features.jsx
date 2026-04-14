@@ -37,7 +37,7 @@ const Features = () => {
   ]
   return (
     <div className='container'>
-      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-20'>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-20 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
         {
           features.map((feature) => (
             <div key={feature.id} className='flex items-center gap-5 bg-[#f4f6fa] rounded-[10px] p-5 group'>

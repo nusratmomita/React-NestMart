@@ -41,3 +41,13 @@
   border-radius: 20px;
   min-height: 350px;
 }
+
+.hide{
+  display: none;
+}
+
+@media (max-width: 479px){
+  .newsletter_section{
+    padding: 54px 5px;
+  }
+}

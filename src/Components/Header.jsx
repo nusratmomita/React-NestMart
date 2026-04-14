@@ -31,9 +31,10 @@ const Header = () => {
                     <h4 className='text-[#707070]'>Account</h4>
                   </div>
 
-                  <ul className="dropdown-content menu bg-base-100 rounded-box w-32 p-2 shadow z-50">
-                    <li><a>Login</a></li>
-                    <li><a>Register</a></li>
+                  <ul className="dropdown-content menu bg-base-100 rounded-box p-2 shadow">
+                    {/* <li><a>Login</a></li>
+                    <li><a>Register</a></li> */}
+                    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                   </ul>
                 </div>
               </div>

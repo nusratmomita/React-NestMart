@@ -36,10 +36,10 @@ const Testimonials = () => {
   ]  
   return (
     <div className='container'>
-        <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 section_title'>What our Clients say</h3>
+        <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>What our Clients say</h3>
 
-        <h5 className='text-[#707070] text-[1rem] my-5'>Customers Review</h5>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+        {/* <h5 className='text-[#707070] text-[1rem] my-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Customers Review</h5> */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
             {
                 testimonialsPerPerson.map((testimonial) => (
                     <div key={testimonial.id} className='border border-[#ececec] w-full flex flex-col justify-start items-start p-7.5 transform transition duration-300 hover:-translate-y-1 hover:border-t-transparent hover:border-r-transparent hover:border-l-transparent'>

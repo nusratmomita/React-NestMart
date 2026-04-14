@@ -43,8 +43,8 @@ const TrendingProducts = () => {
         }
     ]
     return (
-        <div className='hiddenn'>
-            <h3 className='text-[32px] font-bold text-[#253D4E] mt-45 section_title'>Trending Products</h3>
+        <div>
+            <h3 className='text-[32px] font-bold text-[#253D4E] mt-30 md:mt-30 lg:mt-30 2xl:mt-45 section_title'>Trending Products</h3>
             <div className='mt-5 space-y-5'>
                 {
                     topSelling.map((product) => (
