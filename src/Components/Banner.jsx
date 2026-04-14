@@ -15,7 +15,7 @@ const Banner = () => {
     <div className='banner_section'>
         <div className='py-15'>
             <div className="container">
-                <div className='w-[70%]'>
+                <div className=''>
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay, EffectFade]}
                         // navigation
@@ -60,14 +60,14 @@ const Banner = () => {
                         {/* Slide 2 */}
                         <SwiperSlide>
                             <div className='banner_two w-full pt-12 pl-12 pb-50 rounded-4xl'>
-                                <h2 className='text-[72px] font-bold text-[#253D4E] w-[70%]'>
+                                <h2 className='text-[72px] font-bold text-[#253D4E] w-[70%] leading-22.5'>
                                     Fresh Vegetables Big Discount
                                 </h2>
-                                <h4 className='font-normal text-[24px] text-[#4c4c4c] mt-10'>
+                                <h4 className='font-normal text-[24px] text-[#4c4c4c] mt-5'>
                                     Sign Up For The Daily Newsletter
                                 </h4>
 
-                                <div className='mt-15 relative w-105'>
+                                <div className='mt-10 relative w-105'>
                                 <div className='flex items-center gap-2 bg-white w-full p-4 rounded-4xl'>
                                     <IoIosSend className='text-[#4c4c4c]'/>
                                     <input type="email" placeholder='Enter Your Email' className='text-sm outline-none'/>
