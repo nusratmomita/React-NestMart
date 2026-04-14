@@ -11,7 +11,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
             <div className='relative'>
                 {
                     product?.image &&
-                    <img src={product.image} alt="product image" className='xl:pl-5 xl:pr-5' />
+                    <img src={product.image} alt="product image" className='xl:pl-5 xl:pr-5 w-full' />
                 }
 
                 <div>

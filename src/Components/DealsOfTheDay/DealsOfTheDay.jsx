@@ -73,7 +73,7 @@ const DealsOfTheDay = ({popularProducts}) => {
     
     return (
       <div className='container'>
-        <h3 className='text-[32px] font-bold text-[#253D4E] mt-10 px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Deals Of The Day</h3>
+        <h3 className='text-[25px] md:text-[32px] lg:text-[32px] 2xl:text-[32px] font-bold text-[#253D4E] mt-10 px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Deals Of The Day</h3>
         {/* <div>
           {
               popularProducts.map((product) => (
