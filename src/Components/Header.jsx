@@ -5,6 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { CiShoppingCart } from "react-icons/ci";
 import { IoPersonOutline } from "react-icons/io5";
 import { NavLink } from 'react-router';
+import { CgDetailsMore } from "react-icons/cg";
 
 const Header = () => {
   return (
@@ -27,8 +28,8 @@ const Header = () => {
               <div className="lg:hidden">
                 <div className="dropdown dropdown-end">
                   <div tabIndex={0} role="button" className="cursor-pointer flex gap-1 items-center">
-                    <IoPersonOutline className='text-2xl'/>
-                    <h4 className='text-[#707070]'>Account</h4>
+                    <CgDetailsMore className='text-2xl'/>
+                    <h4 className='text-[#707070]'>More</h4>
                   </div>
 
                   <ul className="dropdown-content menu bg-base-100 rounded-box p-2 shadow">
@@ -88,7 +89,7 @@ const Header = () => {
 
               <div className="dropdown dropdown-hover">
                 <div tabIndex={0} role="button" className="flex items-center gap-2 cursor-pointer">
-                  <IoPersonOutline className='text-2xl'/>
+                  <CgDetailsMore className='text-2xl'/>
                   <h4 className='text-[#707070]'>More</h4>
                 </div>
 

@@ -81,27 +81,25 @@ const DealsOfTheDay = ({popularProducts}) => {
               ))
           }
         </div> */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-30 md:gap-15 lg:gap-10 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-30 md:gap-30 lg:gap-20 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 pb-20 md:pb-0 xl:pb-0 2xl:pb-0'>
           { 
               DailyBestSellsData.map((product) => {
 
                 const targetDate = new Date();
-
                   targetDate.setDate(targetDate.getDate() + (product.days || 0));
                   targetDate.setHours(targetDate.getHours() + (product.hours || 0));
                   targetDate.setMinutes(targetDate.getMinutes() + (product.mins || 0));
                   targetDate.setSeconds(targetDate.getSeconds() + (product.secs || 0));
 
                   return(
-                    <div key={product.id} className='relative cursor-pointer group'>
-                      <img className='rounded-[15px] object-cover' src={product.dealOfTheDayImage} alt="dealOfTheDayImage" />
-                      <div className='relativee'>
-                        <div className='flex justify-center items-center'>
+                    <div key={product.id} className='cursor-pointer group'>
+                      <img className='rounded-[15px] object-cover w-full' src={product.dealOfTheDayImage} alt="dealOfTheDayImage" />
+                        <div className='flex justify-center items-center relative'>
                           <Countdown 
                             date={targetDate}
                             renderer={({ days, hours, minutes, seconds }) => {
                                 return (
-                                  <div className="flex gap-2 justify-center mb-4 absolute top-25 2xl:top-35 transform transition duration-300 group-hover:-translate-y-3 px-5">
+                                  <div className="flex gap-2 justify-center mb-4 absolute -top-45 md:-top-55 2xl:-top-55 transform transition duration-300 group-hover:-translate-y-3 px-5 md:px-0 lg:px-0 2xl:px-0">
                                     <div className="bg-white px-2 py-1 rounded text-xl text-[#1d8751] font-medium text-center">{days} 
                                       <br />
                                       <span className='text-[#707070] font-medium'>Days</span>
@@ -125,8 +123,8 @@ const DealsOfTheDay = ({popularProducts}) => {
                           />
                         </div>
 
-                        <div className='flex justify-center items-center'>
-                          <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,0.05)] rounded-[10px] px-7.5 py-6.25 absolute top-45 2xl:top-55 w-full max-w-[86%] transform transition duration-300 group-hover:-translate-y-3'>
+                        <div className='flex justify-center items-center relative'>
+                          <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,0.05)] rounded-[10px] px-7.5 py-6.25 absolute -top-25 md:-top-35 2xl:-top-30 w-full max-w-[86%] mx-auto transform transition duration-300 group-hover:-translate-y-3'>
                             <h4 className='truncate text-[16px] font-bold text-[#253d4e] mb-6' title={product?.product_name}>{product.product_name}</h4>
                             <div className='flex items-center'>
                                 <div className='my-1.25 flex'>
@@ -155,7 +153,6 @@ const DealsOfTheDay = ({popularProducts}) => {
                             </div>
                           </div>
                         </div>
-                      </div>
                     </div>
                   )
               })

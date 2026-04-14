@@ -42,8 +42,8 @@ const TopRated = () => {
         }
     ]
     return (
-        <div>
-            <h3 className='text-[32px] font-bold text-[#253D4E] mt-30 md:mt-30 lg:mt-30 2xl:mt-45 section_title'>Top Rated</h3>
+        <div className='mt-20 xl:mt-30 2xl:mt-30 '>
+            <h3 className='text-[32px] font-bold text-[#253D4E] section_title'>Top Rated</h3>
             <div className='mt-5 space-y-5'>
                 {
                     topSelling.map((product) => (

@@ -96,14 +96,14 @@ const ShopByCategory = () => {
             <div className='relative px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 '>
                 <Swiper
                     slidesPerView={8}
-                    spaceBetween={20}
+                    spaceBetween={10}
                     modules={[Navigation]}
                     navigation={{
                         nextEl: ".category-swiper-btn-next",
                         prevEl: ".category-swiper-btn-prev"
                     }}
                     breakpoints={{
-                        320: { slidesPerView: 2},
+                        320: { slidesPerView: 3},
                         640: { slidesPerView: 3 },
                         768: { slidesPerView: 4 },
                         1024: { slidesPerView: 8 },
