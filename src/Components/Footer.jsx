@@ -99,14 +99,14 @@ const Footer = () => {
         </div>  
       </div>
       <hr className='border-t border-[#63bd8e] my-10'/>
-      <div className='flex justify-between items-center pb-10'>
+      <div className='flex flex-col lg:flex-row xl:flex-row 2xl:flex-row justify-between md:items-center lg:items-center xl:items-center 2xl:items-center gap-6 pb-10 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
         <div>
           <h4 className='text-[14px] text-[#4c4c4c]'>Copyright © {new Date().getFullYear()} Nest all rights reserved. Powered by Botble.</h4>
         </div>
 
-        <div className='flex justify-center items-center gap-2 mr-15'>
+        <div className='flex xl:justify-center 2xl:justify-center items-center gap-2 xl:mr-15 2xl:mr-15'>
           <div>
-            <FiPhoneCall  className='text-4xl text-[#4c4c4c]'/>
+            <FiPhoneCall  className='text-3xl xl:text-4xl 2xl:text-4xl text-[#4c4c4c]'/>
           </div>
           <div>
             <h3 className='text-[#258751] text-2xl font-bold'>1900 - 888</h3>
