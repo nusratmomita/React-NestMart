@@ -9,6 +9,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border: 2px solid red; */
 }
 
 .banner_two{
@@ -16,19 +17,39 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border: 2px solid red; */
 }
 
 .banner_three{
   background-image: url("../assets/bannerImg3.png");
-  background-position: center top;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.swiper-pagination-bullet {
-  background: #ccc;
+.swiper_pagination{
+  position: absolute;
+  left: 420px;
+  bottom: 5px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
 }
 
-.swiper-pagination-bullet-active {
-  background: #1D8751;
+.swiper-pagination-bullet{
+  width: 15px !important;
+  height: 15px !important;
+  background-color: transparent !important;
+  border-radius: 100%;
+  border: 1px solid #000000 !important;
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active{
+  border: 1px solid transparent !important;
+  background-color: #1D8751 !important;
 }

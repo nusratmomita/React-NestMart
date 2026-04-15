@@ -1,13 +1,14 @@
 import React from 'react'
 import siteLogo from "../assets/logo.png"
-import { CiLocationOn } from "react-icons/ci";
+import { CiLocationOn, CiTwitter } from "react-icons/ci";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { IoIosSend } from "react-icons/io";
 import { RiTimer2Line } from "react-icons/ri";
 import playStore from "../assets/app-store.jpg";
 import googleStore from "../assets/google-play.jpg";
 import payment from "../assets/payment-methods.png";
-import { IoCallOutline } from "react-icons/io5";
+import { FiPhoneCall } from "react-icons/fi";
+import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -100,16 +101,51 @@ const Footer = () => {
       <hr className='border-t border-[#63bd8e] my-10'/>
       <div className='flex justify-between items-center pb-10'>
         <div>
-          <h4>Copyright © {new Date().getFullYear()} Nest all rights reserved. Powered by Botble.</h4>
+          <h4 className='text-[14px] text-[#4c4c4c]'>Copyright © {new Date().getFullYear()} Nest all rights reserved. Powered by Botble.</h4>
         </div>
-        <div className='flex justify-center items-center gap-2'>
+
+        <div className='flex justify-center items-center gap-2 mr-15'>
           <div>
-            <IoCallOutline className='text-2xl text-[#4c4c4c]'/>
+            <FiPhoneCall  className='text-4xl text-[#4c4c4c]'/>
           </div>
           <div>
-            <h3 className='text-[#258751] text-lg font-bold'>1900 - 888</h3>
+            <h3 className='text-[#258751] text-2xl font-bold'>1900 - 888</h3>
             <h4 className='text-[#4c4c4c] text-[11px] font-medium -mt-2'>24/7 Support Center</h4>
           </div>
+        </div>
+
+        <div>
+          <div className='flex gap-1'>
+            <h4 className='font-bold'>Follow Us</h4>
+            <div className='flex gap-2'>
+              <a href="www.facebook.com"  target='_blank'>
+                <div className='bg-[#1d8751] text-white w-8.5 h-8.5 text-center rounded-[3px] flex justify-center items-center cursor-pointer border border-transparent hover:border-[#1d8751] hover:bg-white hover:text-[#1d8751] transform transition duration-300 hover:-translate-y-1'>
+                  <FaFacebookF className='text-[14px]'/>
+                </div>
+              </a>
+              <a href="www.x.com"  target='_blank'>
+                <div className='bg-[#1d8751] text-white w-8.5 h-8.5 text-center rounded-[3px] flex justify-center items-center cursor-pointer border border-transparent hover:border-[#1d8751] hover:bg-white hover:text-[#1d8751] transform transition duration-300 hover:-translate-y-1'>
+                  <CiTwitter className='text-[14px]'/>
+                </div>
+              </a>
+              <a href="www.instagram.com"  target='_blank'>
+                <div className='bg-[#1d8751] text-white w-8.5 h-8.5 text-center rounded-[3px] flex justify-center items-center cursor-pointer border border-transparent hover:border-[#1d8751] hover:bg-white hover:text-[#1d8751] transform transition duration-300 hover:-translate-y-1'>
+                  <FaInstagram className='text-[14px]'/>
+                </div>
+              </a>
+              <a href="www.pinterest.com"  target='_blank'>
+                <div className='bg-[#1d8751] text-white w-8.5 h-8.5 text-center rounded-[3px] flex justify-center items-center cursor-pointer border border-transparent hover:border-[#1d8751] hover:bg-white hover:text-[#1d8751] transform transition duration-300 hover:-translate-y-1'>
+                  <FaPinterestP className='text-[14px]'/>
+                </div>
+              </a>
+              <a href="www.youtube.com" target='_blank'>
+                <div className='bg-[#1d8751] text-white w-8.5 h-8.5 text-center rounded-[3px] flex justify-center items-center cursor-pointer border border-transparent hover:border-[#1d8751] hover:bg-white hover:text-[#1d8751] transform transition duration-300 hover:-translate-y-1'>
+                  <FaYoutube className='text-[14px]'/>
+                </div>
+              </a>
+            </div>
+          </div>
+          <h4 className='text-[#4c4c4c] text-[14px] font-medium leading-6'>Up to 15% discount on your first subscribe</h4>
         </div>
       </div>
     </div>

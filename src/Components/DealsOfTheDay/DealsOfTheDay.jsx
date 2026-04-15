@@ -81,7 +81,7 @@ const DealsOfTheDay = ({popularProducts}) => {
               ))
           }
         </div> */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-30 md:gap-30 lg:gap-20 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 pb-20 md:pb-0 xl:pb-0 2xl:pb-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-30 md:gap-30 lg:gap-20 xl:gap-15 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 pb-20 md:pb-0 xl:pb-0 2xl:pb-0'>
           { 
               DailyBestSellsData.map((product) => {
 
@@ -92,14 +92,14 @@ const DealsOfTheDay = ({popularProducts}) => {
                   targetDate.setSeconds(targetDate.getSeconds() + (product.secs || 0));
 
                   return(
-                    <div key={product.id} className='cursor-pointer group'>
+                    <div key={product.id} className='cursor-pointer group bordert-3 md:border-black lg:border-red-900 xl:border-blue-900 2xl:border-purple-800'>
                       <img className='rounded-[15px] object-cover w-full' src={product.dealOfTheDayImage} alt="dealOfTheDayImage" />
                         <div className='flex justify-center items-center relative'>
                           <Countdown 
                             date={targetDate}
                             renderer={({ days, hours, minutes, seconds }) => {
                                 return (
-                                  <div className="flex gap-2 justify-center mb-4 absolute -top-45 md:-top-55 2xl:-top-55 transform transition duration-300 group-hover:-translate-y-3 px-5 md:px-0 lg:px-0 2xl:px-0">
+                                  <div className="flex gap-2 justify-center mb-4 absolute -top-45 md:-top-55 xl:-top-55 2xl:-top-55 transform transition duration-300 group-hover:-translate-y-3 px-5 md:px-0 lg:px-0 2xl:px-0">
                                     <div className="bg-white px-2 py-1 rounded text-xl text-[#1d8751] font-medium text-center">{days} 
                                       <br />
                                       <span className='text-[#707070] font-medium'>Days</span>

@@ -22,7 +22,7 @@ const Header = () => {
                   ☰
                 </label>
 
-                <img className='max-w-28 w-full' src={siteLogo} alt="logo" />
+                <img className='max-w-36 w-full' src={siteLogo} alt="logo" />
               </div>
 
               <div className="lg:hidden">
