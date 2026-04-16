@@ -4,7 +4,7 @@ import { FaCaretUp } from "react-icons/fa";
 import { FaBowlFood } from 'react-icons/fa6';
 import { MdDiscount } from 'react-icons/md';
 import { useLoaderData } from 'react-router';
-import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,CartesianGrid} from "recharts";
+import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,CartesianGrid, LineChart, Line} from "recharts";
 
 const DashboardDefault = () => {
 
@@ -19,79 +19,79 @@ const DashboardDefault = () => {
 
 
     return (
-        <div>
-            <div className='mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-5'>
-                <div className='bg-white shadow-md border-2 border-[#25875115] p-8 rounded-[5px]'>
-                    <div className='flex justify-between items-center gap-3 '>
-                        <FaGlobeAsia className='w-9 h-9 rounded-full'/>
+        <div className='bg-base-200 px-5'>
+            <div className='mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+                <div className='bg-white shadow-[0_3px_4px_0_rgba(0, 0, 0, .03)] border-2 border-[#25875115] rounded-[5px]'>
+                    <div className='flex justify-between items-center gap-3 px-8 pt-8 pb-5'>
+                        <FaGlobeAsia className='w-14 h-14 rounded-full text-[#746e01] bg-yellow-200 p-2'/>
                         <div>
-                            <h3 className='text-[13px] font-semibold'>Total Shippings</h3>
+                            <h3 className='text-[13px] font-semibold'>Revenue</h3>
                             <h4 className='text-right text-[18px] font-bold '>$2,034</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 mt-4 bg-gray-100'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4>40% Up then last month</h4>
+                        <h4 className='whitespace-nowrap text-xl font-semibold'>40% <span className='text-sm'>Up then last year</span></h4>
                     </div>
                 </div>
 
-                <div className='bg-white shadow-md border-2 border-[#25875115] p-8 rounded-[5px]'>
-                    <div className='flex justify-between items-center gap-3 '>
-                        <FaShippingFast className='w-9 h-9 rounded-full'/>
+                <div className='bg-white shadow-[0_3px_4px_0_rgba(0, 0, 0, .03)] border-2 border-[#25875115] rounded-[5px]'>
+                    <div className='flex justify-between items-center gap-3 px-8 pt-8 pb-5'>
+                        <FaShippingFast className='w-14 h-14 rounded-full text-[#004b24] bg-green-200 p-2'/>
                         <div>
                             <h3 className='text-[13px] font-semibold'>Total Sells</h3>
                             <h4 className='text-right text-[18px] font-bold '>$1,034</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 mt-4 bg-gray-100'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4>20% Up then last year</h4>
+                        <h4 className='whitespace-nowrap text-xl font-semibold'>20% <span className='text-sm'>Up then last year</span></h4>
                     </div>
                 </div>
 
-                <div className='bg-white shadow-md border-2 border-[#25875115] p-8 rounded-[5px]'>
-                    <div className='flex justify-between items-center gap-3 '>
-                        <FaBowlFood  className='w-9 h-9 rounded-full'/>
+                <div className='bg-white shadow-[0_3px_4px_0_rgba(0, 0, 0, .03)] border-2 border-[#25875115] rounded-[5px]'>
+                    <div className='flex justify-between items-center gap-3 px-8 pt-8 pb-5'>
+                        <FaBowlFood className='w-14 h-14 rounded-full text-[#4b0009] bg-red-200 p-2'/>
                         <div>
                             <h3 className='text-[13px] font-semibold'>New Products</h3>
-                            <h4 className='text-right text-[18px] font-bold '>4000</h4>
+                            <h4 className='text-right text-[18px] font-bold '>4,000</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 mt-4 bg-gray-100'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4>10% Up then last year</h4>
+                        <h4 className='whitespace-nowrap text-xl font-semibold'>45% <span className='text-sm'>Up then last year</span></h4>
                     </div>
                 </div>
 
-                <div className='bg-white shadow-md border-2 border-[#25875115] p-8 rounded-[5px]'>
-                    <div className='flex justify-between items-center gap-3 '>
-                        <MdDiscount className='w-9 h-9 rounded-full'/>
+                <div className='bg-white shadow-[0_3px_4px_0_rgba(0, 0, 0, .03)] border-2 border-[#25875115] rounded-[5px]'>
+                    <div className='flex justify-between items-center gap-3 px-8 pt-8 pb-5'>
+                        <MdDiscount className='w-14 h-14 rounded-full text-[#02004b] bg-blue-200 p-2'/>
                         <div>
                             <h3 className='text-[13px] font-semibold'>Max Discount</h3>
                             <h4 className='text-right text-[18px] font-bold '>40%</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 mt-4 bg-gray-100'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4>30% Up then last year</h4>
+                        <h4 className='whitespace-nowrap text-xl font-semibold'>30% <span className='text-sm'>Up then last year</span></h4>
                     </div>
                 </div>
             </div>
 
-            <div className="w-full h-100 bg-white p-4 rounded-xl shadow mt-10">
+            <div className="w-full h-100 bg-white p-4 pb-10 rounded-xl shadow mt-10">
                 <h2 className="text-xl font-bold mb-4">Product Prices</h2>
 
                 <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={formattedData}>
-                    <CartesianGrid strokeDasharray="3 3" />
+                    <LineChart data={formattedData}>
+                        <CartesianGrid strokeDasharray="3 3" />
 
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                        <XAxis dataKey="name" />
+                        <YAxis />
 
-                    <Tooltip />
+                        <Tooltip />
 
-                    <Bar dataKey="price" fill="#258751" barSize={20}/>
-                    </BarChart>
+                        <Line dataKey="price" fill="#258751"/>
+                    </LineChart>
                 </ResponsiveContainer>
             </div>
 

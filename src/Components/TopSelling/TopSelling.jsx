@@ -3,7 +3,7 @@ import { images } from '../../Data/config'
 import { FaRegStar, FaStar } from 'react-icons/fa6'
 import { FaStarHalfAlt } from 'react-icons/fa'
 
-const TopProducts = () => {
+const TopSelling = () => {
     const topSelling = [
         {
             "id": 1,
@@ -42,7 +42,7 @@ const TopProducts = () => {
     ]
     return (
         <div  className='mt-20 xl:mt-30 2xl:mt-30'>
-            <h3 className='text-[25px] md:text-[32px] lg:text-[32px] 2xl:text-[32px] font-bold text-[#253D4E] section_title'>Top Selling</h3>
+            <h3 className='text-[20px] md:text-[24px] lg:text-[24px] 2xl:text-[24px] font-bold text-[#253D4E] section_title'>Top Selling</h3>
             <div className='mt-5 space-y-5'>
                 {
                     topSelling.map((product) => (
@@ -89,4 +89,4 @@ const TopProducts = () => {
     )
 }
 
-export default TopProducts
+export default TopSelling

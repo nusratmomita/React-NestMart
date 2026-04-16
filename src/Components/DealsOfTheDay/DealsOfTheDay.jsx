@@ -92,7 +92,7 @@ const DealsOfTheDay = ({popularProducts}) => {
                   targetDate.setSeconds(targetDate.getSeconds() + (product.secs || 0));
 
                   return(
-                    <div key={product.id} className='cursor-pointer group bordert-3 md:border-black lg:border-red-900 xl:border-blue-900 2xl:border-purple-800'>
+                    <div key={product.id} className='cursor-pointer group'>
                       <img className='rounded-[15px] object-cover w-full' src={product.dealOfTheDayImage} alt="dealOfTheDayImage" />
                         <div className='flex justify-center items-center relative'>
                           <Countdown 

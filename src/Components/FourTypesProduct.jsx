@@ -1,5 +1,5 @@
 import React from 'react'
-import TopProducts from './TopProducts/TopProducts'
+import TopProducts from './TopSelling/TopSelling'
 import TrendingProducts from './TrendingProducts/TrendingProducts'
 import RecentlyAdded from './RecentlyAdded/RecentlyAdded'
 import TopRated from './TopRated/TopRated'
