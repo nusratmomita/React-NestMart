@@ -35,12 +35,12 @@ const HeaderMiddle = () => {
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
-        <div className="drawer-content">
+        <div className="drawer-content mx-5 md:mx-5 lg:mx-8 xl:mx-5 2xl:mx-0">
           <div className='container mx-auto py-5 flex justify-between items-center'>
 
-            <div className='flex items-center justify-between w-full px-8 lg:px-0 xl:px-0 2xl:px-0'>
+            <div className='flex items-center justify-between w-full xl:gap-5 2xl:gap-10'>
 
-              <div className='flex items-center gap-3 lg:gap-18 xl:gap-18 2xl:gap-18'>
+              <div className='flex items-center gap-3 lg:gap-1 xl:gap-5'>
                 <label htmlFor="my-drawer" className="lg:hidden text-2xl cursor-pointer">
                   ☰
                 </label>
@@ -49,7 +49,7 @@ const HeaderMiddle = () => {
                   <img className='max-w-36 w-full cursor-pointer' src={siteLogo} alt="logo" />
                 </a>
 
-                <div className='hidden lg:flex justify-between items-center relative w-170 border border-[#1D8751] rounded-sm pt-3 pl-5 pb-3'>
+                <div className='hidden lg:flex justify-between items-center relative w-70 lg:w-100 xl:w-170 border border-[#1D8751] rounded-sm pt-3 pl-5 pb-3'>
                   <div className='flex items-center'>
                     {/* category dropdown */}
                     <div className='w-40 flex items-center cursor-pointer' onClick={handleClick}>

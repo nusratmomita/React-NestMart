@@ -6,59 +6,57 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa";
 
 const HeaderBottom = () => {
-
-    // const [isOpen , setIsOpen] = useState(false);
-
-
     return (
         <div className='container'>
-            <div className='pb-3 hidden lg:flex justify-between items-center'>
-                <div className='flex gap-15 items-center'>
-                    <div className="dropdown dropdown-hover text-[13px] relative cursor-pointer">
-                        <div tabIndex={0} role="button" className='bg-[#1d8751] text-white inline-block rounded-[5px] text-[16px] font-semibold'>
-                            <a href="#">
-                                <button className='flex justify-between items-center gap-2 px-5 py-2 cursor-pointer' ><RxDashboard/> Browse All Categories <RiArrowDownWideLine/> </button>
-                            </a>
+            <div className='pb-3 hidden lg:flex justify-between items-center mx-5 md:mx-5 lg:mx-5 xl:mx-5 2xl:mx-0'>
+                <div className='flex lg:gap-5 xl:gap-5 items-center'>
+                    <div className="relative group">
+                        <div className="cursor-pointer flex items-center gap-1 text-[#4c4c4c] font-medium">
+                            <div className='bg-[#1d8751] text-white inline-block rounded-[5px] text-[16px] font-semibold'>
+                                <a href="#">
+                                    <button className='flex justify-between items-center gap-2 px-5 py-2 cursor-pointer whitespace-nowrap' ><RxDashboard/> Browse All Categories <RiArrowDownWideLine/> </button>
+                                </a>
+                            </div>
                         </div>
-                        <ul tabIndex="-1" className="grid grid-cols-2 gap-3 dropdown-content menu bg-base-100 rounded-box z-9999 w-120 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent border border-[#1d8751] p-4">
+                        <ul className="hidden group-hover:grid grid-cols-2 gap-4 absolute left-0 top-full menu bg-base-100 rounded-box z-999 w-140 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category1} alt="category1" />
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category1} alt="category1" />
                                 <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Milks & Diaries</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category2} alt="category2" />
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category2} alt="category2" />
                                 <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category3} alt="category3" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category3} alt="category3" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Pet Foods</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category4} alt="category4" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category4} alt="category4" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Diet Foods</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category5} alt="category52" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category5} alt="category52" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Vegetable</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category6} alt="category6" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category6} alt="category6" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Baking Materials</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category7} alt="category7" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category7} alt="category7" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Pet Toys</span>
                             </li>
 
                             <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                                <img className='w-12 h-12 hover:bg-transparent' src={images.category8} alt="category8" />
-                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Cold Drinks</span>
+                                <img className='w-13 h-10 hover:bg-transparent' src={images.category8} alt="category8" />
+                                <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Fruits</span>
                             </li>
                         </ul>
                     </div>
@@ -126,8 +124,8 @@ const HeaderBottom = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center gap-4'>
-                    <div>
-                    <FaHeadset  className='text-3xl xl:text-4xl 2xl:text-4xl text-[#252525]'/>
+                    <div className='hidden md:hidden lg:hidden xl:block 2xl:block'>
+                        <FaHeadset  className='text-3xl xl:text-4xl 2xl:text-4xl text-[#252525]'/>
                     </div>
                     <div>
                     <h3 className='text-[#258751] text-2xl font-bold'>1900 - 888</h3>

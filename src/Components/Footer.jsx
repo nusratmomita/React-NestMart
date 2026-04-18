@@ -13,10 +13,10 @@ import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/f
 const Footer = () => {
   return (
     <div className='container'>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
-        <div className='mt-15'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
+        <div className='mt-15 ww-[300px]'>
           <img className='max-w-[50%] w-full' src={siteLogo} alt="siteLogo" />
-          <p className='text-[#253D4E] font-medium text-[16px] mt-5'>Awesome grocery store website template</p>
+          <p className='text-[#253D4E] font-medium text-[16px] mt-5'>Awesome grocery store website <br /> template</p>
           <div className='mt-5 space-y-2 2xl:space-y-3'>
             <div className='flex flex-row md:flex-col lg:flex-col 2xl:flex-col gap-1'>
               <div className='flex'>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='mt-10 2xl:mt-15 ml-0'>
+        <div className='mt-5 2xl:mt-15 xl:ml-10'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Company</h3>
           <ul>
             <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>About Us</li>
@@ -62,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-10 2xl:mt-15'>
+        <div className='mt-5 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Categories</h3>
           <ul>
             <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Milk & Dairy</li>
@@ -74,7 +74,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-10 2xl:mt-15'>
+        <div className='mt-5 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Information</h3>
           <ul>
             <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Contact Us</li>
@@ -87,7 +87,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-10 2xl:mt-15'>
+        <div className='mt-5 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Install App</h3>
           <p className='text-black font-medium text-[16px]'>From App Store or Google Play</p>
           <div className='mt-5 flex'>

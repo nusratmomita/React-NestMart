@@ -75,11 +75,11 @@ const Banner = () => {
                         <div className="swiper_pagination"></div>
 
                         <div className="banner_swiper_nav">
-                            <button className="banner-swiper-btn-prev bg-[#f2f3f4] w-11.25 h-11.25 rounded-full hover:bg-[#1d8751] flex justify-center items-center group cursor-pointer absolute top-[50%] left-8 z-100">
+                            <button className="banner-swiper-btn-prev bg-[#f2f3f4] w-11.25 h-11.25 rounded-full hover:bg-[#1d8751] flex justify-center items-center group cursor-pointer absolute top-[50%] left-8 z-40">
                                 <MdOutlineKeyboardArrowLeft className='text-[22px] group-hover:text-white text-[#4c4c4c]'/>
                             </button>
                 
-                            <button className="banner-swiper-btn-next bg-[#f2f3f4] w-11.25 h-11.25 rounded-full hover:bg-[#1d8751] flex justify-center items-center group cursor-pointer absolute top-[50%] right-8 z-100">
+                            <button className="banner-swiper-btn-next bg-[#f2f3f4] w-11.25 h-11.25 rounded-full hover:bg-[#1d8751] flex justify-center items-center group cursor-pointer absolute top-[50%] right-8 z-40">
                                 <MdOutlineKeyboardArrowRight className='text-[22px] group-hover:text-white text-[#4c4c4c]'/>
                             </button>
                         </div>

@@ -7,7 +7,7 @@ import { LuFlagTriangleRight } from "react-icons/lu";
 const HeaderTop = () => {
   return (
     <div className='container'>
-        <div className='lg:flex justify-between items-center pt-3 hidden'>
+        <div className='lg:flex justify-between items-center pt-3 hidden mx-5 md:mx-5 lg:mx-5 xl:mx-5 2xl:mx-0'>
             <div className='flex gap-3'>
                 <a href="#">
                     <h4 className='text-[13px] text-[#4c4c4c] cursor-pointer'>About Us</h4>
@@ -27,9 +27,9 @@ const HeaderTop = () => {
                     <h4 className='text-[14px] text-[#4c4c4c] font-semibold'>Call Us:  <span className='text-[#1d8751]'>1900 - 888</span></h4>
                 </div>
                 <hr className='bg-[#8a8a8a] h-4 w-px'/>
-                <div className="dropdown dropdown-hover text-[13px] relative cursor-pointer">
-                    <div tabIndex={0} role="button" className="flex items-center gap-1 text-[#4c4c4c] font-medium"><LiaFlagUsaSolid className='text-red-700'/> English <RiArrowDownWideLine></RiArrowDownWideLine > </div>
-                    <ul tabIndex="-1" className="dropdown-content absolute -left-10 top-full menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
+                <div className="relative group">
+                    <div className="cursor-pointer flex items-center gap-1 text-[#4c4c4c] font-medium"><LiaFlagUsaSolid className='text-red-700'/> English <RiArrowDownWideLine></RiArrowDownWideLine > </div>
+                    <ul className="hidden group-hover:block absolute -left-10 top-full menu bg-base-100 rounded-box z-999 w-40 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                         <li><a href='#'><LuFlagTriangleRight/>Bangla</a></li>
                         <li><a href='#'><LuFlagTriangleRight/>Arabic</a></li>
                         <li><a href='#'><LuFlagTriangleRight/>Spanish</a></li>
@@ -37,9 +37,9 @@ const HeaderTop = () => {
                     </ul>
                 </div>
                 <hr className='bg-[#8a8a8a] h-4 w-px'/>
-                <div className="dropdown dropdown-hover text-[13px] relative cursor-pointer">
-                    <div tabIndex={0} role="button" className="flex items-center gap-1 text-[#4c4c4c] font-medium">USD <RiArrowDownWideLine></RiArrowDownWideLine > </div>
-                    <ul tabIndex="-1" className="dropdown-content absolute -left-27 top-full menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
+                <div className="relative group">
+                    <div className="cursor-pointer flex items-center gap-1 text-[#4c4c4c] font-medium">USD<RiArrowDownWideLine></RiArrowDownWideLine > </div>
+                    <ul className="hidden group-hover:block absolute -left-30 top-full menu bg-base-100 rounded-box z-999 w-40 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                         <li><a href='#'>Taka</a></li>
                         <li><a href='#'>Riyal</a></li>
                         <li><a href='#'>Euro</a></li>

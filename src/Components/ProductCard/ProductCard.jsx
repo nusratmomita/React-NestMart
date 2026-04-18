@@ -1,8 +1,7 @@
 import React from 'react'
 import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa'
 import { CiShoppingCart } from "react-icons/ci";
-import AddToCartStyle1 from '../Buttons/AddToCartStyle1';
-import AddToCartStyle2 from '../Buttons/AddToCartStyle2';
+import Button from '../Buttons/Button';
 
 const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,dealsOfTheDay}) => {
   return (
@@ -124,7 +123,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
 
                     {
                         style1 ? 
-                        <AddToCartStyle1/>
+                        <Button buttonText="Add"/>
                         :
                         ""
                     }
@@ -150,7 +149,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                         style1 ? 
                         ""
                         :
-                        <AddToCartStyle2/>
+                        <Button buttonText="Add To Cart"/>
                     }
                 </div>
             </div>

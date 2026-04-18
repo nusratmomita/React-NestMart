@@ -11,6 +11,7 @@ import { TbListDetails, TbReorder } from "react-icons/tb";
 import { IoIosMoon, IoIosSettings } from 'react-icons/io'
 import { RxCross2 } from 'react-icons/rx'
 import { CiSearch } from 'react-icons/ci'
+import DashboardFooter from '../Components/DashboardFooter'
 
 const DashboardLayout = () => {
 
@@ -141,16 +142,19 @@ const DashboardLayout = () => {
                           </div>
                     </div>
                 </div>
-                <DashboardHeader/>
+                <div className="sticky top-0 z-50 bg-white ">
+                 <DashboardHeader/>
+                </div>
                 {/* Page content here */}
                 <Outlet></Outlet>
                 {/* Page content here */}
+                <DashboardFooter/>
 
             </div>
             <div className="drawer-side border-r border-[#cecece]">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay overflow-y-scroll"></label>
                 <ul className="menu bg-white text-md min-h-full w-80 lg:w-60 p-4 flex flex-col justify-between"> 
-                  <div className='lg:mt-15'>
+                  <div>
                   {/* this one manages opening and closing the drawer */}
                   <label htmlFor="my-drawer-2" className="cursor-pointer block lg:hidden">
                     <RxCross2 className='bg-[#def9ec] rounded-full text-2xl p-1 mb-2  ml-auto hover:bg-[#1d8751] hover:text-white transition' />
@@ -164,32 +168,35 @@ const DashboardLayout = () => {
                     />
                   </div>
                     
+                  <div className='-ml-15 flex justify-center items-center gap-2 lg:mb-10 lg:mt-5'>
+                      <img className='w-[40%]' src={siteLogo} alt="siteLogo" />
+                  </div>
 
                   <li>
-                      <NavLink to="/dashboard" className="border-l-3 border-transparent group hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm" end>
-                          <LuLayoutDashboard className="dashboardNavLinks inline-block text-[#4c4c4c] group-hover:text-white" />
-                          <span className='text-[#4c4c4c] group-hover:text-white'>Dashboard</span>
+                      <NavLink to="/dashboard" end>
+                          <LuLayoutDashboard className="dashboardNavLinks inline-block text-[#4c4c4c]" />
+                          <span className='text-[#4c4c4c]'>Dashboard</span>
                       </NavLink>
                   </li>
                     
                   <li className='mt-2'>
-                      <NavLink to="/" className="border-l-3 border-transparent group hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm">
-                          <FaHome className="dashboardNavLinks inline-block text-[#4c4c4c] group-hover:text-white" />
-                          <span className='text-[#4c4c4c] group-hover:text-white'>Home</span>
+                      <NavLink to="/">
+                          <FaHome className="dashboardNavLinks inline-block text-[#4c4c4c]" />
+                          <span className='text-[#4c4c4c]'>Home</span>
                       </NavLink>
                   </li>
 
                   <li className='mt-2'>
                     <div 
                         onClick={() => toggleMenu("auth")}
-                        className='flex justify-between items-center cursor-pointer group border-l-3 border-transparent hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm'
+                        className='flex justify-between items-center cursor-pointer'
                       >
-                        <div className='flex items-center gap-2 group-hover:text-white'>
+                        <div className='flex items-center gap-2 '>
                           <FaRegUser />
                           <span>Authentication</span>
                         </div>
 
-                        {openMenu === "auth" ? <FaChevronUp className='text-[#707070] group-hover:text-white' /> : <FaChevronDown className='text-[#707070] group-hover:text-white' />}
+                        {openMenu === "auth" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
                       </div>
 
                       {openMenu === "auth" && (
@@ -203,14 +210,14 @@ const DashboardLayout = () => {
                   <li className='mt-2'>
                     <div 
                       onClick={() => toggleMenu("error")}
-                      className='flex justify-between items-center cursor-pointer border-l-3 border-transparent group hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm'
+                      className='flex justify-between items-center cursor-pointer'
                     >
-                      <div className='flex items-center gap-2 group-hover:text-white'>
+                      <div className='flex items-center gap-2 '>
                         <BiErrorAlt />
                         <span>Error Pages</span>
                       </div>
 
-                      {openMenu === "error" ? <FaChevronUp className='text-[#707070] group-hover:text-white' /> : <FaChevronDown className='text-[#707070] group-hover:text-white' />}
+                      {openMenu === "error" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
                     </div>
 
                     {openMenu === "error" && (
@@ -224,14 +231,14 @@ const DashboardLayout = () => {
                   <li className='mt-2'>
                     <div 
                       onClick={() => toggleMenu("product")}
-                      className='flex justify-between items-center cursor-pointer group border-l-3 border-transparent hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm'
+                      className='flex justify-between items-center cursor-pointer'
                     >
-                      <div className='flex items-center gap-2 group group-hover:text-white'>
+                      <div className='flex items-center gap-2 group '>
                         <MdProductionQuantityLimits />
                         <span>Product Pages</span>
                       </div>
 
-                      {openMenu === "product" ? <FaChevronUp className='text-[#707070] group-hover:text-white' /> : <FaChevronDown className='text-[#707070] group-hover:text-white' />}
+                      {openMenu === "product" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
                     </div>
 
                     {openMenu === "product" && (
@@ -245,14 +252,14 @@ const DashboardLayout = () => {
                   <li className='mt-2'>
                     <div 
                       onClick={() => toggleMenu("details")}
-                      className='flex justify-between items-center cursor-pointer group border-l-3 border-transparent hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm'
+                      className='flex justify-between items-center cursor-pointer'
                     >
-                      <div className='flex items-center gap-2 group-hover:text-white'>
+                      <div className='flex items-center gap-2 '>
                         <TbListDetails />
                         <span>Product Details</span>
                       </div>
 
-                      {openMenu === "details" ? <FaChevronUp className='text-[#707070] group-hover:text-white' /> : <FaChevronDown className='text-[#707070] group-hover:text-white' />}
+                      {openMenu === "details" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
                     </div>
 
                     {openMenu === "details" && (
@@ -265,14 +272,14 @@ const DashboardLayout = () => {
                   <li className='mt-2'>
                     <div 
                       onClick={() => toggleMenu("cart")}
-                      className='flex justify-between items-center cursor-pointer group border-l-3 border-transparent hover:bg-[#1d8751] hover:border-l-3 hover:border-[#fdc040] transition-all duration-300 rounded-sm'
+                      className='flex justify-between items-center cursor-pointer'
                     >
-                      <div className='flex items-center gap-2 group-hover:text-white'>
+                      <div className='flex items-center gap-2 '>
                         <FaLuggageCart />
                         <span>My Cart Pages</span>
                       </div>
 
-                      {openMenu === "cart" ? <FaChevronUp className='text-[#707070] group-hover:text-white'/> : <FaChevronDown className='text-[#707070] group-hover:text-white' />}
+                      {openMenu === "cart" ? <FaChevronUp className='text-[#4c4c4c] '/> : <FaChevronDown className='text-[#4c4c4c] ' />}
                     </div>
 
                     {openMenu === "cart" && (
@@ -283,10 +290,6 @@ const DashboardLayout = () => {
                   </li>
                 </div>
 
-
-                <div className='-ml-15 flex justify-center items-center gap-2'>
-                    <img className='w-[40%]' src={siteLogo} alt="siteLogo" />
-                </div>
               </ul>
             </div>
     </div>

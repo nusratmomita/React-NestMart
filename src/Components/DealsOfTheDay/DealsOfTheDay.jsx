@@ -1,9 +1,8 @@
 import React from 'react'
 import ProductCard from '../ProductCard/ProductCard'
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import AddToCartStyle1 from '../Buttons/AddToCartStyle1';
-import AddToCartStyle2 from '../Buttons/AddToCartStyle2';
 import Countdown from 'react-countdown';
+import Button from '../Buttons/Button';
 
 const DealsOfTheDay = ({popularProducts}) => {
     console.log(popularProducts);
@@ -74,14 +73,8 @@ const DealsOfTheDay = ({popularProducts}) => {
     return (
       <div className='container'>
         <h3 className='text-[25px] md:text-[32px] lg:text-[32px] 2xl:text-[32px] font-bold text-[#253D4E] mt-10 px-10 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>Deals Of The Day</h3>
-        {/* <div>
-          {
-              popularProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} dealsOfTheDay={true}/>
-              ))
-          }
-        </div> */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-30 md:gap-30 lg:gap-20 xl:gap-15 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 pb-20 md:pb-0 xl:pb-0 2xl:pb-0'>
+        
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-40 md:gap-30 lg:gap-20 xl:gap-15 2xl:gap-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0 pb-20 md:pb-0 xl:pb-0 2xl:pb-0'>
           { 
               DailyBestSellsData.map((product) => {
 
@@ -149,7 +142,7 @@ const DealsOfTheDay = ({popularProducts}) => {
                                 <h4 className='text-[#1d8751] font-bold'>${product?.current_price.toFixed(2)}</h4>
                                 <h4 className='text-[#1d8751] font-bold line-through text-sm'>${product?.previous_price.toFixed(2)}</h4>
                               </div>
-                              <AddToCartStyle1/>
+                              <Button buttonText="Add"/>
                             </div>
                           </div>
                         </div>
