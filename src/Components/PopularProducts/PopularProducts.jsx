@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa'
 import { CiShoppingCart } from "react-icons/ci";
-import ProductCard from './ProductCard/ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 
 const PopularProducts = ({popularProductsData}) => {
   // console.log(popularProductsData)

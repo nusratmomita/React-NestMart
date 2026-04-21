@@ -11,10 +11,88 @@ import { FiPhoneCall } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
+
+  const companyOptions = [
+    {
+      option: "About Us",
+      href: "#"
+    },
+    {
+      option: "Affiliate",
+      href: "#"
+    },
+    {
+      option: "Career",
+      href: "#"
+    },
+    {
+      option: "Contact Us",
+      href: "#"
+    }
+  ]
+
+  const categoryOptions = [
+    {
+      option: "Milk & Dairy",
+      href: "#"
+    },
+    {
+      option: "Clothing & Beauty",
+      href: "#"
+    },
+    {
+      option: "Pet Toy",
+      href: "#"
+    },
+    {
+      option: "Baking",
+      href: "#"
+    },
+    {
+      option: "Fresh Foods",
+      href: "#"
+    },
+    {
+      option: "Diet Foods",
+      href: "#"
+    }
+  ]
+
+  const informationOptions = [
+    {
+      option: "Contact Us",
+      href: "#"
+    },
+    {
+      option: "About Us",
+      href: "#"
+    },
+    {
+      option: "Cookie Policy",
+      href: "#"
+    },
+    {
+      option: "Terms & Conditions",
+      href: "#"
+    },
+    {
+      option: "Return & Exchange",
+      href: "#"
+    },
+    {
+      option: "Shipping & Delivery",
+      href: "#"
+    },
+    {
+      option: "Privacy Policy",
+      href: "#"
+    }
+  ]
+
   return (
     <div className='container'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
-        <div className='mt-15 ww-[300px]'>
+        <div className='mt-5 2xl:mt-15 ww-[300px]'>
           <img className='max-w-[50%] w-full' src={siteLogo} alt="siteLogo" />
           <p className='text-[#253D4E] font-medium text-[16px] mt-5'>Awesome grocery store website <br /> template</p>
           <div className='mt-5 space-y-2 2xl:space-y-3'>
@@ -22,7 +100,7 @@ const Footer = () => {
               <div className='flex'>
                 <CiLocationOn className='text-[#1d8751] text-2xl mr-1'/>
                 <h4 className='text-black font-bold text-[14px]'>Address: </h4>
-                <span className='text-black font-medium text-[14px]'>5171 W Campbell Ave undefined</span>
+                <span className='text-black font-medium text-[14px] whitespace-nowrap'>5171 W Campbell Ave undefined</span>
               </div>
               <div className='flex flex-col'>
                 <span className='text-black font-medium text-[14px]'>Kent, Utah 53127 United States</span>
@@ -55,35 +133,45 @@ const Footer = () => {
         <div className='mt-5 2xl:mt-15 xl:ml-10'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Company</h3>
           <ul>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>About Us</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Affiliate</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Career</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Contact Us</li>
+            {
+              companyOptions.map((company,index) => (
+                <li key={index} className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>
+                  <a href={company.href}>
+                    {company.option}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>  
 
         <div className='mt-5 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Categories</h3>
           <ul>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Milk & Dairy</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Clothing & beauty</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Pet Toy</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Baking</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Fresh Foods</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Diet Foods</li>
+            {
+              categoryOptions.map((category,index) => (
+                <li key={index} className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>
+                  <a href={category.href}>
+                    {category.option}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>  
 
         <div className='mt-5 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Information</h3>
           <ul>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Contact Us</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>About Us</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Cookie Policy</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Terms & Conditions</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Return & Exchange</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Shipping & Delivery</li>
-            <li className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>Privacy Policy</li>
+            {
+              informationOptions.map((information,index) => (
+                <li key={index} className='text-black hover:text-[#1d8751] hover:ml-2 font-medium text-[14px] mb-4 transition-all duration-300 cursor-pointer'>
+                  <a href={information.href}>
+                    {information.option}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </div>  
 

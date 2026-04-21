@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Banner from '../Components/Banner'
-import DemoProducts from '../Components/DemoProducts'
-import PopularProducts from '../Components/PopularProducts'
+import PopularProducts from '../Components/PopularProducts/PopularProducts'
 import { useLoaderData } from 'react-router'
-import DailyBestSells from '../Components/DailyBestSells'
+import DailyBestSells from '../Components/DailyBestSells/DailyBestSells'
 import DealsOfTheDay from '../Components/DealsOfTheDay/DealsOfTheDay'
-import FourTypesProduct from '../Components/FourTypesProduct'
+import FourTypesProduct from '../Components/FourCategories/FourTypesProduct'
 import ShopByCategory from '../Components/ShopByCategory/ShopByCategory'
-import Testimonials from '../Components/Testimonials'
-import Newsletter from '../Components/Newsletter'
-import Features from '../Components/Features'
+import Testimonials from '../Components/Testimonial/Testimonials'
+import Features from '../Components/Features/Features'
+import DemoProductSingleCard from '../Components/DemoProducts/DemoProductSingleCard'
+import DemoProducts from '../Components/DemoProducts/DemoProducts'
+import Newsletter from '../Components/Newletter/Newsletter'
 
 const Home = () => {
     const popularProducts = useLoaderData();
@@ -43,7 +44,6 @@ const Home = () => {
       <DemoProducts/>
       <PopularProducts popularProductsData={popularProducts}/>
       <DailyBestSells popularProductsData={popularProducts}/>
-      {/* <DealsOfTheDay popularProducts={popularProducts}/> */}
       <DealsOfTheDay/>
       <FourTypesProduct/>
       <ShopByCategory/>

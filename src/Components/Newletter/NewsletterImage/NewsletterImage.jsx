@@ -1,5 +1,5 @@
 import React from 'react'
-import newsletterImage from "../../assets/newsletter-image.png"
+import newsletterImage from "../../../assets/newsletter-image.png"
 
 
 const NewsletterImage = () => {

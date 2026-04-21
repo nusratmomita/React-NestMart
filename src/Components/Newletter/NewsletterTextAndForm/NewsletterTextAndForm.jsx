@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosSend } from 'react-icons/io'
-import EmailInput from '../EmialInput/EmailInput'
+import EmailInput from '../../EmailInput/EmailInput'
 
 const NewsletterTextAndForm = () => {
   return (

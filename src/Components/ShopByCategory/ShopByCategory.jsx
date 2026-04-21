@@ -114,7 +114,7 @@ const ShopByCategory = () => {
                 {
                     categories.map((category)=>(
                         <SwiperSlide key={category.id}>
-                            <SingleCategory  category={category}/>
+                            <SingleCategory category={category}/>
                         </SwiperSlide>
                     ))
                 }

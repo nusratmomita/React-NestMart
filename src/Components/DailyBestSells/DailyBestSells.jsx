@@ -1,5 +1,5 @@
 import React from 'react'
-import DailyBestSellsImage from './DailyBestSells/DailyBestSellsImage'
+import DailyBestSellsImage from './DailyBestSellsImage'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { Autoplay } from 'swiper/modules';
-import ProductCard from './ProductCard/ProductCard'
+import ProductCard from '../ProductCard/ProductCard'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 

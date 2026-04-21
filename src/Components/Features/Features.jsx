@@ -1,5 +1,6 @@
 import React from 'react'
-import { images } from '../Data/config'
+import { images } from '../../Data/config'
+import SingleFeatureCard from './SingleFeatureCard'
 
 const Features = () => {
 
@@ -40,13 +41,7 @@ const Features = () => {
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-10 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
         {
           features.map((feature) => (
-            <div key={feature.id} className='flex items-center justify-center md:justify-start lg:justify-start xl:justify-start 2xl:justify-start gap-5 bg-[#f4f6fa] rounded-[10px] p-5 group'>
-              <img className='transform transition duration-300 group-hover:-translate-y-1' src={feature.feature_img} alt={feature.feature_title} />
-              <div>
-                <h3 className='text-[#242424] text-[18px] font-semibold'>{feature.feature_title}</h3>
-                <p className='text-[#707070] font-semibold'>{feature.feature_description}</p>
-              </div>
-            </div>
+            <SingleFeatureCard key={feature.id} feature={feature}/>
           ))
         }
       </div>

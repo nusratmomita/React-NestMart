@@ -21,6 +21,9 @@ import category10 from "../assets/category10.png"
 import category11 from "../assets/category11.png"
 import category12 from "../assets/category12.png"
 import category13 from "../assets/category13.png"
+import demoProductImage1 from "../assets/productImg1.png"
+import demoProductImage2 from "../assets/productImg2.png"
+import demoProductImage3 from "../assets/productImg3.png"
 
 export const images = {
     dealOfTheDay1,
@@ -45,5 +48,8 @@ export const images = {
     category10,
     category11,
     category12,
-    category13
+    category13,
+    demoProductImage1,
+    demoProductImage2,
+    demoProductImage3
 }

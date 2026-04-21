@@ -3,14 +3,19 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa'
 import { CiShoppingCart } from "react-icons/ci";
 import Button from '../Buttons/Button';
 
-const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,dealsOfTheDay}) => {
+
+const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side}) => {
   return (
     <div>
-        <div className='border border-[#ececec] rounded-[15px] hover:border-[#1d87509b] hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)]'>
+        <div className="border border-[#ececec] rounded-[15px] hover:border-[#1d87509b] hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] group transition-all duration-300">
             <div className='relative'>
                 {
                     product?.image &&
-                    <img src={product.image} alt="product image" className='xl:pl-5 xl:pr-5 w-full' />
+                    <img src={product.image} alt="product image" className="xl:pl-5 xl:pr-5 w-full block group-hover:hidden cursor-pointer"  />
+                }
+                {
+                    product?.hovered_image &&
+                    <img src={product.hovered_image} alt="hovered product image" className="xl:pl-5 xl:pr-5 w-full hidden group-hover:block cursor-pointer" />
                 }
 
                 <div>
@@ -53,7 +58,6 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
             <div className='px-5'>
                 <h4 className='mb-1.25 text-[12px] text-[#707070]'>{product?.category}</h4>
                 {
-                    !dealsOfTheDay &&
                     <h3 className='truncate text-[#253D4E] text-[16px] font-bold' title={product?.product_name}>{product?.product_name}</h3>
                 }
                 {
@@ -92,7 +96,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                     companyName ? 
                     <h4 className='font-semibold mt-1.25 mb-6'>
                         <span className='text-[#707070]'>Sold By </span>
-                        <span className='text-[#1d8751] underline'>{product?.sold_by}</span>
+                        <span className='text-[#1d8751] underline hover:text-[#fdc040] hover:no-underline cursor-pointer'>{product?.sold_by}</span>
                     </h4>
                     :
                     ""
@@ -123,7 +127,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
 
                     {
                         style1 ? 
-                        <Button buttonText="Add"/>
+                        <Button buttonText="Add" Icon={CiShoppingCart} variant="light"/>
                         :
                         ""
                     }
@@ -149,7 +153,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side,
                         style1 ? 
                         ""
                         :
-                        <Button buttonText="Add To Cart"/>
+                        <Button buttonText="Add To Cart" Icon={CiShoppingCart} variant="primary"/>
                     }
                 </div>
             </div>

@@ -9,9 +9,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import { EffectFade } from 'swiper/modules';
 import { Autoplay } from 'swiper/modules';
-import EmailInput from './EmialInput/EmailInput';
-import ShopNowBtn from './Buttons/ShopNowBtn';
+import EmailInput from './EmailInput/EmailInput';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight  } from "react-icons/md";
+import { TiArrowRight } from 'react-icons/ti';
+import Button from './Buttons/Button';
 
 
 const Banner = () => {
@@ -89,7 +90,7 @@ const Banner = () => {
                         <div className='banner_three rounded-[10px] pt-35 pb-52 pl-13'>
                             <h3 className='text-[24px] text-[#253d4e] font-bold transform transition duration-300 hover:-translate-y-3 cursor-pointer'>Delivered to your home</h3>
                             <div className='mt-22 '>
-                                <ShopNowBtn/>
+                                <Button buttonText="Shop Now" Icon={TiArrowRight} iconPosition="right" href="#" variant="shop"></Button>
                             </div>
                         </div>
                     </div>

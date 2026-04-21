@@ -128,7 +128,7 @@ const HeaderMiddle = () => {
       <div className="drawer-side z-9999">
         <label htmlFor="my-drawer" className="drawer-overlay"><RxCross2 className='bg-[#def9ec] rounded-[30px] text-2xl debug'/></label>
 
-        <div className="bg-white w-100 h-screen p-5 overflow-y-auto">
+        <div className="bg-white w-80 h-screen p-5 overflow-y-auto">
 
           <div className='flex items-center justify-between mb-5'>
             <img src={siteLogo} className="w-[40%]" alt="logo"/>
@@ -157,7 +157,7 @@ const HeaderMiddle = () => {
                       <span className='text-[#1d8751] text-xl font-semibold'>Browse Categories</span>
                     </div>
 
-                    {openMenu === "browseCategories" ? <FaChevronUp className='text-[#ff0000]' /> : <FaChevronDown className='text-[#707070]' />}
+                    {openMenu === "browseCategories" ? <FaChevronUp className='text-[#707070]' /> : <FaChevronDown className='text-[#707070]' />}
                   </div>
 
                   {openMenu === "browseCategories" && (
