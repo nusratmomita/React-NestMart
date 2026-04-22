@@ -16,6 +16,10 @@ import { PiCurrencyCircleDollarLight } from "react-icons/pi";
 import { RiHeadphoneLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import { useSelector } from 'react-redux';
+import SingleCartItem from './SingleCartItem';
+import Button from "../Buttons/Button";
+import { LuFlagTriangleRight } from 'react-icons/lu';
+import SingleBrowseCategory from './SingleBrowseCategory';
 
 const HeaderMiddle = () => {
 
@@ -23,7 +27,179 @@ const HeaderMiddle = () => {
   // console.log(cartItems) 
 
   const [openMenu, setOpenMenu] = useState(null);
+
+  const subtotal = cartItems.reduce((total,items) => items.productPrice * items.productQuantity , 0) 
+  // console.log(subtotal)
   
+  const languageDropdown = [
+    {
+        languageName: "Bangla",
+        href: "#"
+    },
+    {
+        languageName: "Arabic",
+        href: "#"
+    },
+    {
+        languageName: "Spanish",
+        href: "#"
+    },
+    {
+        languageName: "French",
+        href: "#"
+    }
+  ]
+
+  const currencyDropdown = [
+    {
+        currencyName: "Taka",
+        href: "#"
+    },
+    {
+        currencyName: "Riyal",
+        href: "#"
+    },
+    {
+        currencyName: "Euro",
+        href: "#"
+    },
+    {
+        currencyName: "Penny",
+        href: "#"
+    }
+  ]
+
+  const homeOptions = [
+    {
+      homeName: "Home 1",
+      href: "#"
+    },
+    {
+      homeName: "Home 2",
+      href: "#"
+    },
+    {
+      homeName: "Home 3",
+      href: "#"
+    },
+    {
+      homeName: "Home 4",
+      href: "#"
+    }
+  ]
+
+  const shopOptions = [
+    {
+      shopName: "Shop 1",
+      href: "#"
+    },
+    {
+      shopName: "Shop 2",
+      href: "#"
+    },
+    {
+      shopName: "Shop 3",
+      href: "#"
+    },
+    {
+      shopName: "Shop 4",
+      href: "#"
+    }
+  ]
+
+  const storeOptions = [
+    {
+      storeName: "Store 1",
+      href: "#"
+    },
+    {
+      storeName: "Store 2",
+      href: "#"
+    },
+    {
+      storeName: "Store 3",
+      href: "#"
+    },
+    {
+      storeName: "Store 4",
+      href: "#"
+    }
+  ]
+
+  const productOptions = [
+    {
+      productName: "Product 1",
+      href: "#"
+    },
+    {
+      productName: "Product 2",
+      href: "#"
+    },
+    {
+      productName: "Product 3",
+      href: "#"
+    },
+    {
+      productName: "Product 4",
+      href: "#"
+    }
+  ]
+
+  const blogOptions = [
+    {
+      blogName: "Blog 1",
+      href: "#"
+    },
+    {
+      blogName: "Blog 2",
+      href: "#"
+    },
+    {
+      blogName: "Blog 3",
+      href: "#"
+    },
+    {
+      blogName: "Blog 4",
+      href: "#"
+    }
+  ]
+
+  const browseCategories = [
+    {
+      image: images.category1,
+      categoryName: "Milks & Diaries"
+    },
+    {
+      image: images.category2,
+      categoryName: "Cold Drinks"
+    },
+    {
+      image: images.category3,
+      categoryName: "Pet Foods"
+    },
+    {
+      image: images.category4,
+      categoryName: "Diet Foods"
+    },
+    {
+      image: images.category5,
+      categoryName: "Vegetable"
+    },
+    {
+      image: images.category6,
+      categoryName: "Baking Materials"
+    },
+    {
+      image: images.category7,
+      categoryName: "Pet Toys"
+    },
+    {
+      image: images.category8,
+      categoryName: "Fruits"
+    }
+
+  ]
+
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
@@ -102,7 +278,7 @@ const HeaderMiddle = () => {
                 <h4 className='text-[#707070]'>Wishlist</h4>
               </div>
 
-              <div className='flex items-center gap-4 cursor-pointer'>
+              <div className='flex items-center gap-4 cursor-pointer group relative'>
                 <div className='relative'>
                   <CiShoppingCart className='text-2xl'/>
                   {
@@ -117,6 +293,38 @@ const HeaderMiddle = () => {
                   }
                 </div>
                 <h4 className='text-[#707070]'>Cart</h4>
+                <ul className='hidden group-hover:block absolute top-full right-0 py-2'>
+                  {
+                    cartItems.length === 0 ?
+                    <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,.05)] py-6 pl-5 pr-6.75 w-62.5 border border-[#ececec] rounded-sm'>
+                      <h3 className='text-gray-600 font-semibold whitespace-nowrap'>No products in the cart.</h3>
+                    </div>
+                    :
+                    <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,.05)] border border-[#ececec] rounded-sm w-80 pl-2 pr-2 pt-5 pb-5'>
+                      <h3 className='text-gray-600 font-semibold whitespace-nowrap mb-1 ml-2'>Your Cart</h3>
+                      <ul>
+                        <li>
+                          {
+                            cartItems.map((item,index) => (
+                              <SingleCartItem key={index} item={item}/>
+                            ))
+                          }
+                        </li>
+                      </ul>
+                      <div className='flex justify-between items-center mt-2 pt-3'>
+                        <span className='font-semibold text-gray-700'>Subtotal:</span>
+                        <span className='font-bold text-[#1d8751]'>
+                          ${subtotal.toFixed(2)}
+                        </span>
+                      </div>
+                      <div className='w-full mt-2 block'>
+                        <NavLink to="/dashboard" className="bg-[#1c875133] flex justify-center items-center text-[#1d8751] text-lg font-semibold hover:bg-[#1d8751] hover:text-white rounded-sm py-2">
+                          View Cart
+                        </NavLink>
+                      </div>
+                    </div>
+                  }
+                </ul>
               </div>
 
               <NavLink to="/dashboard" className="flex items-center gap-1 cursor-pointer">
@@ -165,31 +373,14 @@ const HeaderMiddle = () => {
                   </div>
 
                   {openMenu === "browseCategories" && (
-                    <ul className='mt-2 space-y-2'>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category10} alt="category1" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Milks & Diaries</span>
-                      </li>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category2} alt="category2" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Pet Toys</span>
-                      </li>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category3} alt="category3" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Vegetables</span>
-                      </li>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category4} alt="category4" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Drinks</span>
-                      </li>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category5} alt="category5" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Diet Food</span>
-                      </li>
-                      <li className='border border-[#f2f3f4] rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
-                        <img className='w-8 h-8 hover:bg-transparent' src={images.category6} alt="category6" />
-                        <span className='text-[#253d4e] text-[14px] font-semibold hover:bg-transparent'>Pet Food</span>
-                      </li>
+                    <ul className='mt-2 space-y-2 flex flex-col items-center'>
+                      {
+                        browseCategories.map((category,index) => (
+                            <li key={index} className='border border-[#f2f3f4] w-full cursor-pointer rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
+                                <SingleBrowseCategory category={category}/>
+                            </li>
+                        ))
+                      }
                     </ul>
                   )}
               </li>
@@ -217,10 +408,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "home" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">Home 1</a></li>
-                  <li><a href="/">Home 2</a></li>
-                  <li><a href="/">Home 3</a></li>
-                  <li><a href="/">Home 4</a></li>
+                {
+                  homeOptions.map((home,index) => (
+                      <li key={index}>
+                          <a href={home.href}>
+                              {home.homeName}
+                          </a>
+                      </li>
+                  ))
+                }
                 </ul>
               </li>
               
@@ -246,10 +442,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "shop" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">Shop 1</a></li>
-                  <li><a href="/">Shop 2</a></li>
-                  <li><a href="/">Shop 3</a></li>
-                  <li><a href="/">Shop 4</a></li>
+                {
+                  shopOptions.map((shop,index) => (
+                      <li key={index}>
+                          <a href={shop.href}>
+                              {shop.shopName}
+                          </a>
+                      </li>
+                  ))
+                }
                 </ul>
               </li>
 
@@ -275,10 +476,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "stores" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">Stores 1</a></li>
-                  <li><a href="/">Stores 2</a></li>
-                  <li><a href="/">Stores 3</a></li>
-                  <li><a href="/">Stores 4</a></li>
+                {
+                  storeOptions.map((store,index) => (
+                      <li key={index}>
+                          <a href={store.href}>
+                              {store.storeName}
+                          </a>
+                      </li>
+                  ))
+                }
                 </ul>
               </li>
 
@@ -304,10 +510,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "product" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">Product 1</a></li>
-                  <li><a href="/">Product 2</a></li>
-                  <li><a href="/">Product 3</a></li>
-                  <li><a href="/">Product 4</a></li>
+                {
+                  productOptions.map((product,index) => (
+                    <li key={index}>
+                        <a href={product.href}>
+                            {product.productName}
+                        </a>
+                    </li>
+                  ))
+                }
                 </ul>
               </li>
 
@@ -333,10 +544,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "blogs" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">Blogs 1</a></li>
-                  <li><a href="/">Blogs 2</a></li>
-                  <li><a href="/">Blogs 3</a></li>
-                  <li><a href="/">Blogs 4</a></li>
+                {
+                  blogOptions.map((blog,index) => (
+                    <li key={index}>
+                        <a href={blog.href}>
+                            {blog.blogName}
+                        </a>
+                    </li>
+                  ))
+                }
                 </ul>
               </li>
               <hr className='border-t border-gray-300 my-3'/>
@@ -353,7 +569,54 @@ const HeaderMiddle = () => {
             <ul className='space-y-2 text-[#253D4E] font-semibold'>
               <li className='flex items-center gap-2'><GiRecycle  className='text-[#1d8751]'/> Compare</li>
               <li className='flex items-center gap-2'><FaRegHeart className='text-[#1d8751]'/> Wishlist</li>
-              <li className='flex items-center gap-2'><CiShoppingCart className='text-[#1d8751]'/> Cart</li>
+              <li>
+                <div 
+                  onClick={() => toggleMenu("cart")}
+                  className='flex justify-between items-center cursor-pointer'
+                >
+                  <div className='flex items-center gap-2 font-semibold'>
+                    <CiShoppingCart className='text-[#1d8751]'/>
+                    <span>Cart</span>
+                  </div>
+
+                  {openMenu === "cart" 
+                    ? <FaChevronUp className='text-[#707070]' /> 
+                    : <FaChevronDown className='text-[#707070]' />}
+                </div>
+                <div className={`space-y-2 transition-all duration-300 ease-in-out 
+                  ${openMenu === "cart" ? "max-h-140 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}>
+                  {
+                    cartItems.length === 0 ?
+                    <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,.05)] py-6 pl-5 pr-6.75 w-62.5 border border-[#ececec] rounded-sm'>
+                      <h3 className='text-gray-600 font-semibold whitespace-nowrap'>No products in the cart.</h3>
+                    </div>
+                    :
+                    <div className='bg-white shadow-[5px_5px_15px_rgba(0,0,0,.05)] border border-[#ececec] rounded-sm w-60 pl-2 pr-2 pt-5 pb-5'>
+                      <h3 className='text-gray-600 font-semibold whitespace-nowrap mb-1 ml-2'>Your Cart</h3>
+                      <ul>
+                        <li>
+                          {
+                            cartItems.map((item,index) => (
+                              <SingleCartItem key={index} item={item}/>
+                            ))
+                          }
+                        </li>
+                      </ul>
+                      <div className='flex justify-between items-center mt-2 pt-3'>
+                        <span className='font-semibold text-gray-700'>Subtotal:</span>
+                        <span className='font-bold text-[#1d8751]'>
+                          ${subtotal.toFixed(2)}
+                        </span>
+                      </div>
+                      <div className='w-full mt-2 block'>
+                        <NavLink to="/dashboard" className="bg-[#1c875133] flex justify-center items-center text-[#1d8751] text-lg font-semibold hover:bg-[#1d8751] hover:text-white rounded-sm py-2">
+                          View Cart
+                        </NavLink>
+                      </div>
+                    </div>
+                    }
+                  </div>
+              </li>
               <li className='flex items-center gap-2'><IoPeopleSharp className='text-[#1d8751]'/> About Us</li>
               <li className='flex items-center gap-2'><FaBorderAll className='text-[#1d8751]'/> Track Order</li>
               <li>
@@ -375,10 +638,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "language" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">English</a></li>
-                  <li><a href="/">Bangla</a></li>
-                  <li><a href="/">Spanish</a></li>
-                  <li><a href="/">French</a></li>
+                  {
+                    languageDropdown.map((language,index)=> (
+                        <li key={index}>
+                            <a href={language.href}>
+                                {language.languageName}
+                            </a>
+                        </li>
+                    ))
+                  }
                 </ul>
               </li>
               <li>
@@ -400,10 +668,15 @@ const HeaderMiddle = () => {
                   className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
                   ${openMenu === "currency" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
                 >
-                  <li><a href="/">USD</a></li>
-                  <li><a href="/">Taka</a></li>
-                  <li><a href="/">Euro</a></li>
-                  <li><a href="/">Penny</a></li>
+                  {
+                    currencyDropdown.map((currency,index)=> (
+                        <li key={index}>
+                            <a href={currency.href}>
+                                {currency.currencyName}
+                            </a>
+                        </li>
+                    ))
+                  }
                 </ul>
               </li>
               <li className='flex items-center gap-2'><RiHeadphoneLine className='text-[#1d8751]'/> 1900-888</li>

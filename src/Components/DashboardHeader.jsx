@@ -18,7 +18,7 @@ const DashboardHeader = () => {
 
 
   return (
-    <div className='bg-white p-2 shadow-md lg:flex justify-between items-center hidden px-5'>
+    <div className='bg-white p-2 border-b border-[#e6e6e6] lg:flex justify-between items-center hidden px-5'>
       <div className='flex gap-3 items-center bg-[#f8f7fa] p-2 relative w-40 lg:w-50 rounded-2xl'>
         <CiSearch className='text-gray-600'/>
         <input
@@ -39,7 +39,7 @@ const DashboardHeader = () => {
               className='bg-gray-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <MdOutlineNotificationsActive className='text-xl text-[#7a7a7a]'/>
-              <div className='absolute top-0 right-5'>
+              <div className='absolute -top-1 right-4'>
                 <span className='flex justify-center items-center bg-red-600 text-sm text-white w-5 h-5 rounded-full absolute'>3</span>
               </div>
             </div>

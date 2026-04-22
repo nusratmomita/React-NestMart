@@ -153,7 +153,7 @@ const DashboardLayout = () => {
           <DashboardFooter/>
 
       </div>
-      <div className="drawer-side border-r border-[#cecece]">
+      <div className="drawer-side border-r border-[#e6e6e6]">
           <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay overflow-y-scroll"></label>
           <ul className="menu bg-white text-md min-h-full w-80 lg:w-60 p-4 flex flex-col justify-between"> 
             <div>
@@ -161,6 +161,11 @@ const DashboardLayout = () => {
             <label htmlFor="my-drawer-2" className="cursor-pointer block lg:hidden">
               <RxCross2 className='bg-[#def9ec] rounded-full text-2xl p-1 mb-2  ml-auto hover:bg-[#1d8751] hover:text-white transition' />
             </label>
+
+            <div className='-ml-15 mb-5 flex justify-center items-center gap-2 lg:mb-10 lg:mt-5'>
+                <img className='w-[40%]' src={siteLogo} alt="siteLogo" />
+            </div>
+
             <div className='flex gap-3 items-center bg-[#f8f7fa] p-2 relative w-full my-3 rounded-2xl lg:hidden'>
               <CiSearch className='text-gray-600'/>
               <input
@@ -169,42 +174,38 @@ const DashboardLayout = () => {
                 className='w-full text-[12px] font-semibold outline-none'
               />
             </div>
-              
-            <div className='-ml-15 flex justify-center items-center gap-2 lg:mb-10 lg:mt-5'>
-                <img className='w-[40%]' src={siteLogo} alt="siteLogo" />
-            </div>
 
             <li>
-                <NavLink to="/dashboard" end>
-                    <LuLayoutDashboard className="dashboardNavLinks inline-block text-[#4c4c4c]" />
-                    <span className='text-[#4c4c4c]'>Dashboard</span>
+                <NavLink to="/dashboard" className="hover:bg-transparent" end>
+                    <LuLayoutDashboard className='text-[#6e708c] font-semibold' />
+                    <span className='text-[#6e708c] font-semibold'>Dashboard</span>
                 </NavLink>
             </li>
               
             <li className='mt-2'>
-                <NavLink to="/">
-                    <FaHome className="dashboardNavLinks inline-block text-[#4c4c4c]" />
-                    <span className='text-[#4c4c4c]'>Home</span>
+                <NavLink to="/" className="hover:bg-transparent">
+                    <FaHome className="dashboardNavLinks inline-block text-[#6e708c] font-semibold'" />
+                    <span className='text-[#6e708c] font-semibold'>Home</span>
                 </NavLink>
             </li>
 
             <li className='mt-2'>
               <div 
                   onClick={() => toggleMenu("auth")}
-                  className='flex justify-between items-center cursor-pointer'
+                  className='flex justify-between items-center cursor-pointer hover:bg-transparent'
                 >
                   <div className='flex items-center gap-2 '>
-                    <FaRegUser />
-                    <span>Authentication</span>
+                    <FaRegUser className='text-[#6e708c] font-semibold'/>
+                    <span className='text-[#6e708c] font-semibold'>Authentication</span>
                   </div>
 
-                  {openMenu === "auth" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
+                  {openMenu === "auth" ? <FaChevronUp className='text-[#6e708c] opacity-60' /> : <FaChevronDown className='text-[#6e708c] opacity-60' />}
                 </div>
 
                 {openMenu === "auth" && (
                   <ul className='ml-6 mt-2 space-y-2'>
-                    <li><NavLink to="/dashboard/login">Login</NavLink></li>
-                    <li><NavLink to="/dashboard/register">Register</NavLink></li>
+                    <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/login">Login</NavLink></li>
+                    <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/register">Register</NavLink></li>
                   </ul>
                 )}
             </li>
@@ -212,20 +213,20 @@ const DashboardLayout = () => {
             <li className='mt-2'>
               <div 
                 onClick={() => toggleMenu("error")}
-                className='flex justify-between items-center cursor-pointer'
+                className='flex justify-between items-center cursor-pointer hover:bg-transparent'
               >
                 <div className='flex items-center gap-2 '>
-                  <BiErrorAlt />
-                  <span>Error Pages</span>
+                  <BiErrorAlt className='text-[#6e708c] font-semibold'/>
+                  <span className='text-[#6e708c] font-semibold'>Error Pages</span>
                 </div>
 
-                {openMenu === "error" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
+                {openMenu === "error" ? <FaChevronUp className='text-[#6e708c] opacity-60' /> : <FaChevronDown className='text-[#6e708c] opacity-60' />}
               </div>
 
               {openMenu === "error" && (
                 <ul className='ml-6 mt-2 space-y-2'>
-                  <li><NavLink to="/dashboard/404">404</NavLink></li>
-                  <li><NavLink to="/dashboard/500">500</NavLink></li>
+                  <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/404">404</NavLink></li>
+                  <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/500">500</NavLink></li>
                 </ul>
               )}
             </li>
@@ -233,20 +234,20 @@ const DashboardLayout = () => {
             <li className='mt-2'>
               <div 
                 onClick={() => toggleMenu("product")}
-                className='flex justify-between items-center cursor-pointer'
+                className='flex justify-between items-center cursor-pointer hover:bg-transparent'
               >
                 <div className='flex items-center gap-2 group '>
-                  <MdProductionQuantityLimits />
-                  <span>Product Pages</span>
+                  <MdProductionQuantityLimits className='text-[#6e708c] font-semibold'/>
+                  <span className='text-[#6e708c] font-semibold'>Product Pages</span>
                 </div>
 
-                {openMenu === "product" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
+                {openMenu === "product" ? <FaChevronUp className='text-[#6e708c] opacity-60' /> : <FaChevronDown className='text-[#6e708c] opacity-60' />}
               </div>
 
               {openMenu === "product" && (
                 <ul className='ml-6 mt-2 space-y-2'>
-                  <li><NavLink to="/dashboard/products">All Products</NavLink></li>
-                  <li><NavLink to="/dashboard/add-product">Add Product</NavLink></li>
+                  <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/products">All Products</NavLink></li>
+                  <li><NavLink className='text-[#6e708c] font-semibold' to="/dashboard/add-product">Add Product</NavLink></li>
                 </ul>
               )}
             </li>
@@ -254,19 +255,19 @@ const DashboardLayout = () => {
             <li className='mt-2'>
               <div 
                 onClick={() => toggleMenu("details")}
-                className='flex justify-between items-center cursor-pointer'
+                className='flex justify-between items-center cursor-pointer hover:bg-transparent'
               >
                 <div className='flex items-center gap-2 '>
-                  <TbListDetails />
-                  <span>Product Details</span>
+                  <TbListDetails className='text-[#6e708c] font-semibold'/>
+                  <span className='text-[#6e708c] font-semibold'>Product Details</span>
                 </div>
 
-                {openMenu === "details" ? <FaChevronUp className='text-[#4c4c4c] ' /> : <FaChevronDown className='text-[#4c4c4c] ' />}
+                {openMenu === "details" ? <FaChevronUp className='text-[#6e708c] opacity-60' /> : <FaChevronDown className='text-[#6e708c] opacity-60' />}
               </div>
 
               {openMenu === "details" && (
                 <ul className='ml-6 mt-2 space-y-2'>
-                  <li><NavLink to="/dashboard/details">Details Page</NavLink></li>
+                  <li><NavLink to="/dashboard/details" className='text-[#6e708c] font-semibold'>Details Page</NavLink></li>
                 </ul>
               )}
             </li>
@@ -274,19 +275,19 @@ const DashboardLayout = () => {
             <li className='mt-2'>
               <div 
                 onClick={() => toggleMenu("cart")}
-                className='flex justify-between items-center cursor-pointer'
+                className='flex justify-between items-center cursor-pointer hover:bg-transparent'
               >
                 <div className='flex items-center gap-2 '>
-                  <FaLuggageCart />
-                  <span>My Cart Pages</span>
+                  <FaLuggageCart className='text-[#6e708c] font-semibold' />
+                  <span className='text-[#6e708c] font-semibold'>My Cart Pages</span>
                 </div>
 
-                {openMenu === "cart" ? <FaChevronUp className='text-[#4c4c4c] '/> : <FaChevronDown className='text-[#4c4c4c] ' />}
+                {openMenu === "cart" ? <FaChevronUp className='text-[#6e708c] opacity-60'/> : <FaChevronDown className='text-[#6e708c] opacity-60' />}
               </div>
 
               {openMenu === "cart" && (
                 <ul className='ml-6 mt-2 space-y-2'>
-                  <li><NavLink to="/dashboard">Cart</NavLink></li>
+                  <li><NavLink to="/dashboard" className='text-[#6e708c] font-semibold'>Cart</NavLink></li>
                 </ul>
               )}
             </li>

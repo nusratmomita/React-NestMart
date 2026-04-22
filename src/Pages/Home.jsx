@@ -36,33 +36,33 @@ const Home = () => {
       top: 0,
       behavior: "smooth"
     });
-  };
+    };
 
-  return (
-    <div className='quicksand-font overflow-hidden'>
-      <Banner/>
-      <DemoProducts/>
-      <PopularProducts popularProductsData={popularProducts}/>
-      <DailyBestSells popularProductsData={popularProducts}/>
-      <DealsOfTheDay/>
-      <FourTypesProduct/>
-      <ShopByCategory/>
-      <Testimonials/>
-      <Newsletter/>
-      <Features/>
+    return (
+      <div className='quicksand-font overflow-hidden'>
+        <Banner/>
+        <DemoProducts/>
+        <PopularProducts popularProductsData={popularProducts}/>
+        <DailyBestSells popularProductsData={popularProducts}/>
+        <DealsOfTheDay/>
+        <FourTypesProduct/>
+        <ShopByCategory/>
+        <Testimonials/>
+        <Newsletter/>
+        <Features/>
 
-      {showTop && (
-        <button
-          onClick={scrollToTop}
-          className={`fixed bottom-8 right-8 cursor-pointer bg-[#1d8751] text-white p-3 rounded-full shadow-lg hover:bg-[#145c3a] transition-all duration-300 z-50 ${
-            showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 pointer-events-none"
-          }`}
-        >
-          ↑
-        </button>
-      )}
-    </div>
-  )
+        {showTop && (
+          <button
+            onClick={scrollToTop}
+            className={`fixed bottom-8 right-8 cursor-pointer bg-[#1d8751] text-white p-3 rounded-full shadow-lg hover:bg-[#145c3a] transition-all duration-300 z-50 ${
+              showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 pointer-events-none"
+            }`}
+          >
+            ↑
+          </button>
+        )}
+      </div>
+    )
 }
 
 export default Home

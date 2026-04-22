@@ -12,7 +12,6 @@ import { FaPlus } from "react-icons/fa";
 const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side}) => {
 
     const cartProducts = useSelector((state) => state.myCart.items);
-    // console.log(cartProducts)
 
     const dispatch = useDispatch();
 

@@ -5,7 +5,7 @@ import DealsOfTheDaySingleCard from './DealsOfTheDaySingleCard';
 const DealsOfTheDay = () => {
     const DealOfTheDayData = [
         {
-            "id": 1,
+            "id": 101,
             "product_name": "Chen Watermelon",
             "stars": 4,
             "total_reviews": 10,
@@ -21,7 +21,7 @@ const DealsOfTheDay = () => {
         },
 
         {
-            "id": 2,
+            "id": 102,
             "product_name": "Encore Seafoods Stuffed Alaskan (Digital)",
             "stars": 3,
             "total_reviews": 10,
@@ -37,7 +37,7 @@ const DealsOfTheDay = () => {
         },
 
         {
-            "id": 3,
+            "id": 103,
             "product_name": "All Natural Italian-Style Chicken Meatballs",
             "stars": 4.5,
             "total_reviews": 10,
@@ -53,7 +53,7 @@ const DealsOfTheDay = () => {
         },
 
         {
-            "id": 4,
+            "id": 104,
             "product_name": "Encore Seafoods Stuffed Alaskan (Digital)",
             "stars": 3,
             "total_reviews": 10,
