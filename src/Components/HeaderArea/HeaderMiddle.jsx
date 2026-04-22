@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import siteLogo from "../../assets/logo.png"
 import { GiRecycle } from "react-icons/gi";
 import { FaBorderAll, FaChevronDown, FaChevronUp, FaFacebookF, FaInstagram, FaPinterestP, FaRegHeart, FaYoutube } from "react-icons/fa";
@@ -15,15 +15,12 @@ import { IoPeopleSharp } from "react-icons/io5";
 import { PiCurrencyCircleDollarLight } from "react-icons/pi";
 import { RiHeadphoneLine } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import { useSelector } from 'react-redux';
 
 const HeaderMiddle = () => {
 
-  const selectRef = useRef(null);
-
-  const handleClick = () => {
-    selectRef.current.focus();
-    selectRef.current.click();
-  }
+  const cartItems = useSelector((state) => state.myCart.items);
+  // console.log(cartItems) 
 
   const [openMenu, setOpenMenu] = useState(null);
   
@@ -52,8 +49,8 @@ const HeaderMiddle = () => {
                 <div className='hidden lg:flex justify-between items-center relative w-70 lg:w-100 xl:w-170 border border-[#1D8751] rounded-sm pt-3 pl-5 pb-3'>
                   <div className='flex items-center'>
                     {/* category dropdown */}
-                    <div className='w-40 flex items-center cursor-pointer' onClick={handleClick}>
-                      <select name="categories" id="categories" className='appearance-none focus:outline-none' ref={selectRef}>
+                    <div className='w-40 flex items-center cursor-pointer'>
+                      <select name="categories" id="categories" className='appearance-none focus:outline-none'>
                         <option value="All Category">All Categories</option>
                         <option value="Diet foods">Diet foods</option>
                         <option value="Pet foods">Pet foods</option>
@@ -85,7 +82,7 @@ const HeaderMiddle = () => {
             </div>
 
             <div className='hidden lg:flex gap-5'>
-              <div className='flex items-center gap-3 cursor-pointer'>
+              <div className='flex items-center gap-4 cursor-pointer'>
                 <div className='relative'>
                   <GiRecycle className='text-2xl'/>
                   <span className='bg-[#258157] rounded-full text-white w-5 h-5 text-[12px] flex items-center justify-center absolute -top-2 -right-3'>
@@ -95,7 +92,7 @@ const HeaderMiddle = () => {
                 <h4 className='text-[#707070]'>Compare</h4>
               </div>
 
-              <div className='flex items-center gap-3 cursor-pointer'>
+              <div className='flex items-center gap-4 cursor-pointer'>
                 <div className='relative'>
                   <FaRegHeart className='text-2xl'/>
                   <span className='bg-[#258157] rounded-full text-white w-5 h-5 text-[12px] flex items-center justify-center absolute -top-2 -right-3'>
@@ -105,12 +102,19 @@ const HeaderMiddle = () => {
                 <h4 className='text-[#707070]'>Wishlist</h4>
               </div>
 
-              <div className='flex items-center gap-3 cursor-pointer'>
+              <div className='flex items-center gap-4 cursor-pointer'>
                 <div className='relative'>
                   <CiShoppingCart className='text-2xl'/>
+                  {
+                    cartItems.length === 0 ?
+                    <span className='bg-[#258157] rounded-full text-white w-5 h-5 text-[12px] flex items-center justify-center absolute -top-2 -right-3'>
+                      0
+                    </span>
+                  :
                   <span className='bg-[#258157] rounded-full text-white w-5 h-5 text-[12px] flex items-center justify-center absolute -top-2 -right-3'>
-                    0
+                    {cartItems.length}
                   </span>
+                  }
                 </div>
                 <h4 className='text-[#707070]'>Cart</h4>
               </div>

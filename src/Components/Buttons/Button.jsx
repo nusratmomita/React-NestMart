@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({ buttonText, Icon, iconPosition = "left", href, variant }) => {
+const Button = ({ buttonText, Icon, iconPosition = "left", href, variant , onClick }) => {
 
   const baseStyle = `py-2.5 px-5 text-[14px] font-bold rounded-sm flex justify-center items-center gap-2 cursor-pointer transition-all duration-300`
 
@@ -27,7 +27,7 @@ const Button = ({ buttonText, Icon, iconPosition = "left", href, variant }) => {
     )
   }
   return (
-    <div className={`${baseStyle} ${variants[variant]}`}>
+    <div className={`${baseStyle} ${variants[variant]}`} onClick={onClick}>
       {content}
     </div>
   )

@@ -2,10 +2,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from 'react-router'
 import { router } from './Routes/Routes.jsx'
-import { ToastContainer } from 'react-toastify'
+import { Provider } from 'react-redux'
+import { store } from './Redux/store.js'
 
 createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}>
-    <ToastContainer/>
-  </RouterProvider>
+  <Provider store={store}>
+    <RouterProvider router={router}>
+    </RouterProvider>
+  </Provider>
 )

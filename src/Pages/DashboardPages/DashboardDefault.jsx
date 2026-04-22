@@ -1,14 +1,24 @@
 import React from 'react'
-import {  FaShippingFast } from "react-icons/fa";
+import {  FaPlus, FaShippingFast } from "react-icons/fa";
 import { FaCaretUp } from "react-icons/fa";
 import { FaBowlFood } from 'react-icons/fa6';
 import { MdDiscount } from 'react-icons/md';
-import { useLoaderData } from 'react-router';
+import { NavLink, useLoaderData } from 'react-router';
 import {BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer,CartesianGrid, LineChart, Line} from "recharts";
 import { BiGlobeAlt } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import {  decreaseQuantity, increaseQuantity , removeItem } from '../../Features/CartSlice';
+import Swal from 'sweetalert2';
+import { FiMinus } from 'react-icons/fi';
+import { IoTrashBinOutline } from 'react-icons/io5';
+import Button from '../../Components/Buttons/Button';
+import { PiShoppingCartBold } from 'react-icons/pi';
 
 const DashboardDefault = () => {
+
+    const cartItems = useSelector((state) => state.myCart.items);
 
     const data = useLoaderData();
 
@@ -18,6 +28,45 @@ const DashboardDefault = () => {
         : item.product_name,
         price: item.current_price
     }));
+
+    const dispatch = useDispatch();
+
+     // for deleting item
+    const handleDelete = (id) => {
+        Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+            title: "Deleted!",
+            text: "Your item has been deleted.",
+            icon: "success"
+            });
+            dispatch(removeItem(id));
+            toast.success("Item deleted successfully!")
+        }
+        });
+    }
+
+    // for updating quantity
+    const updateQuantity = (productId , type) => {
+        if(type === 'increase'){
+            dispatch(increaseQuantity(productId));
+            toast.info("Quantity increased", { autoClose: 1000 });
+        } 
+        else {
+            dispatch(decreaseQuantity(productId));
+            toast.warn("Quantity decreased", { autoClose: 1000 });
+        }
+    }
+    
+    const totalPrice = cartItems.reduce((total,item) => total + item.productQuantity * item.productPrice , 0 );
 
 
     return (
@@ -153,63 +202,88 @@ const DashboardDefault = () => {
             </div>
 
             <div className="bg-white p-4 rounded-xl shadow overflow-x-auto mt-10 mb-10">
-                <h2 className="text-xl font-bold mb-4">Product Details</h2>
+                <h2 className="text-xl font-bold mb-4">Your Purchases</h2>
 
-                <table className="w-full text-sm text-left border border-gray-200">
-                    
-                    <thead className="bg-[#258751] text-white">
-                    <tr>
-                        <th className="p-3">Image</th>
-                        <th className="p-3">Product</th>
-                        <th className="p-3">Category</th>
-                        <th className="p-3">Price</th>
-                        <th className="p-3">Rating</th>
-                        <th className="p-3">Seller</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    {data.map((product) => (
-                        <tr key={product.id} className="border-b border-gray-300 hover:bg-gray-50">
-
-                            <td className="p-3">
-                                <img
-                                src={product.image}
-                                alt={product.product_name}
-                                className="w-12 h-12 object-cover rounded"
-                                />
-                            </td>
-
-                            <td className="p-3 font-semibold text-[#253D4E]">
-                                {product.product_name}
-                            </td>
-
-                            <td className="p-3">{product.category}</td>
-
-                            <td className="p-3">
-                                <span className="text-[#258751] font-bold">
-                                ${product.current_price}
-                                </span>
-                                <br />
-                                {product.previous_price && (
-                                <span className="line-through text-gray-400 text-xs">
-                                    ${product.previous_price}
-                                </span>
-                                )}
-                            </td>
-
-                            <td className="p-3">
-                                ⭐ {product.total_rating} ({product.total_reviews})
-                            </td>
-
-                            <td className="p-3 text-[#258751]">
-                                {product.sold_by}
-                            </td>
-
+                {
+                    cartItems.length === 0 ?
+                    <div className='flex flex-col justify-center items-center'>
+                        <h3 className='text-lg md:text-lg lg:text-xl font-semibold text-black'>There is no item in the cart</h3>
+                        <NavLink to="/" className="my-2">
+                            <Button buttonText="Home" iconPosition='left' Icon={PiShoppingCartBold} variant="primary"></Button>
+                        </NavLink>
+                    </div>
+                    :
+                    <>
+                    <div className='mx-5 lg:mx-5 overflow-x-auto'>
+                        <table className="table w-full table-zebra mt-5 border border-gray-500 rounded-sm p-2">
+                        <thead>
+                        <tr>
+                            <th className="p-3 text-center">Image</th>
+                            <th className="p-3 text-center">Product</th>
+                            <th className="p-3 text-center">Price</th>
+                            <th className="p-3 text-center">Quantity</th>
+                            <th className="p-3 text-center">Added On</th>
+                            <th className='p-3 text-center'>Actions</th>
                         </tr>
-                    ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {
+                            cartItems.map((item) => (
+                            <tr key={item.productId} className='text-center'>
+                                <td className="p-3">
+                                    <span className='flex justify-center items-center'>
+                                        <img
+                                            src={item.productImage}
+                                            alt={item.productImage}
+                                            className="w-12 h-12 object-cover rounded border-none"
+                                        />
+                                    </span>
+                                </td>
+
+                                <td className="p-3 font-semibold text-[#253D4E] truncate" title={item?.productName}>
+                                    {item.productName} 
+                                </td>
+
+
+                                <td className="p-3">
+                                    <span className="text-[#253D4E] font-bold">
+                                        ${item.productPrice}
+                                    </span>
+                                </td>
+
+                                <td className='text-lg text-center whitespace-nowrap'>
+                                    <div className='flex justify-center items-center gap-2 whitespace-nowrap'>
+                                        <span>
+                                            <FiMinus onClick={() => updateQuantity(item.productId , "decrease")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FiMinus>
+                                        </span>
+                                        <span>{item.productQuantity}</span>
+                                        <span>
+                                            <FaPlus onClick={() => updateQuantity(item.productId , "increase")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FaPlus>
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td className="p-3">
+                                    <span className="text-[#253D4E] font-bold">
+                                        {item.added_time}
+                                    </span>
+                                </td>
+                            
+                                <td className="text-lg flex gap-2 justify-center items-center whitespace-nowrap">
+                                    <Button buttonText="Delete" iconPosition='left' variant="primary" Icon={IoTrashBinOutline} onClick={() => handleDelete(item.productId)}></Button>
+                                </td>
+                            </tr>
+                            )
+                            )}
+                        <tr className="font-bold text-lg bg-gray-200">
+                            <td colSpan="1" className="text-left">Total</td>
+                            <td colSpan="5" className="text-right">${totalPrice}</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </>
+                }
             </div>
         </div>
 

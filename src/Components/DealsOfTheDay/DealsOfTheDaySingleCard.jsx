@@ -3,15 +3,68 @@ import { CiShoppingCart } from 'react-icons/ci';
 import Countdown from 'react-countdown';
 import Button from '../Buttons/Button';
 import ReviewStar from '../ReviewStar/ReviewStar';
+import { FiMinus } from 'react-icons/fi';
+import { FaPlus } from "react-icons/fa";
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { addItem, decreaseQuantity, increaseQuantity } from '../../Features/CartSlice';
 
 const DealsOfTheDaySingleCard = ({product}) => {
-
     const targetDate = new Date();
 
     targetDate.setDate(targetDate.getDate() + (product.days || 0));
     targetDate.setHours(targetDate.getHours() + (product.hours || 0));
     targetDate.setMinutes(targetDate.getMinutes() + (product.mins || 0));
     targetDate.setSeconds(targetDate.getSeconds() + (product.secs || 0));
+
+
+    const cartProducts = useSelector((state) => state.myCart.items);
+
+    const dispatch = useDispatch();
+
+    const addItems = (product) => {
+        const existingProducts = cartProducts.find((item) => product.id === item.productId);
+
+        const newProduct = {
+            productId: product.id,
+            productName: product.product_name,
+            productPrice: product.current_price,
+            productImage: product.dealOfTheDayImage,
+            productInStock: (10 - product.total_selling),
+            productQuantity: 1,
+            added_time: new Date().toISOString().split("T")[0]
+        }
+
+        if(existingProducts && existingProducts.productQuantity >= existingProducts.productInStock){
+            toast.error("Product Out Of Stock.");
+            return;
+        }
+        
+        if(existingProducts){
+            toast.error("You already added this product");
+        }
+        else{
+            toast.success("Product added successfully!");
+            dispatch(addItem(newProduct));
+        }
+
+    }
+
+    const getQuantity = (id) => {
+        const item = cartProducts.find((item) => item.productId === id)
+
+        return item ? item.productQuantity : 0;
+    }
+    
+
+    const updateQuantity = (productId,type) => {
+        if(type === "increase"){
+            dispatch(increaseQuantity(productId));
+        }
+        else{
+            dispatch(decreaseQuantity(productId));
+        }
+    }
 
   return (
     <div className='cursor-pointer group'>
@@ -60,7 +113,25 @@ const DealsOfTheDaySingleCard = ({product}) => {
                     <h4 className='text-[#1d8751] font-bold'>${product?.current_price.toFixed(2)}</h4>
                     <h4 className='text-[#1d8751] font-bold line-through text-sm'>${product?.previous_price.toFixed(2)}</h4>
                 </div>
-                <Button buttonText="Add" Icon={CiShoppingCart} variant="light"/>
+                {
+                    getQuantity(product.id) === 0 ? (
+                        <Button 
+                            buttonText="Add" Icon={CiShoppingCart} variant="light" onClick={() => addItems(product)}
+                        />
+                    )
+                    :
+                    <div className='bg-[#1c875133] flex justify-center items-center gap-2 whitespace-nowrap  px-4 py-1 text-sm font-medium rounded-sm border-none'>
+                        <span>
+                            <FiMinus onClick={() => updateQuantity(product.id,"decrease")} className='bg-gray-200 rounded-sm text-[#1d8751] cursor-pointer text-lg p-1' />
+                        </span>
+                        <span className='text-lg text-[#1d8751]'>
+                            {getQuantity(product.id)}
+                        </span>
+                        <span>
+                            <FaPlus onClick={() => updateQuantity(product.id,"increase")} className='bg-gray-200 rounded-sm text-[#1d8751] cursor-pointer text-lg p-1' />
+                        </span>
+                    </div>
+                }
             </div>
             </div>
         </div>

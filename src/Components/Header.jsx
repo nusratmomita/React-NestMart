@@ -13,7 +13,7 @@ const Header = () => {
 
       <hr className='border-t border-gray-200 my-2 hidden md:hidden lg:block xl:block 2xl:block'/>
 
-      <div className="sticky top-0 z-50 bg-white">
+      <div className="sticky top-0 z-99 bg-white">
         <HeaderMiddle/>
       </div>
 

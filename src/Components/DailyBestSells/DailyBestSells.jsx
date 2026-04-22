@@ -48,11 +48,11 @@ const DailyBestSells = ({popularProductsData}) => {
             }
           </Swiper>
           <div className="daily_prod_swiper_nav flex gap-3 mt-4">
-            <button className="product-swiper-btn-prev bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] left-3 z-100">
+            <button className="product-swiper-btn-prev bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] left-3 z-5">
               <FaArrowLeftLong className='w-8 h-8 p-2 group-hover:text-white text-[#4c4c4c]'/>
             </button>
 
-            <button className="product-swiper-btn-next bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] right-3 z-100">
+            <button className="product-swiper-btn-next bg-[#f2f3f4] rounded-full hover:bg-[#1d8751] group cursor-pointer absolute top-[30%] right-3 z-5">
               <FaArrowRightLong className='w-8 h-8 p-2 group-hover:text-white text-[#4c4c4c]'/>
             </button>
           </div>
