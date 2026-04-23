@@ -140,8 +140,8 @@ const HeaderBottom = () => {
     ]
     return (
         <div className='container'>
-            <div className='pb-3 hidden lg:flex justify-between items-center mx-5 md:mx-5 lg:mx-5 xl:mx-5 2xl:mx-0'>
-                <div className='flex lg:gap-5 xl:gap-5 items-center'>
+            <div className='pb-3 hidden lg:flex justify-between items-center gap-2 mx-5 md:mx-5 lg:mx-5 xl:mx-5 2xl:mx-0'>
+                <div className='flex lg:gap-1 xl:gap-5 items-center'>
                     <div className="relative group">
                         <div className="cursor-pointer flex items-center gap-1 text-[#4c4c4c] font-medium">
                             <div className='bg-[#1d8751] text-white inline-block rounded-[5px] text-[16px] font-semibold'>
@@ -151,7 +151,7 @@ const HeaderBottom = () => {
                         <ul className="hidden group-hover:grid grid-cols-2 gap-4 absolute left-0 top-full menu bg-base-100 rounded-box z-999 w-140 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                             {
                                 browseCategories.map((category,index) => (
-                                    <li key={index} className='border border-[#f2f3f4] cursor-pointer rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
+                                    <li key={index} className='border border-[#f2f3f4] cursor-pointer rounded-[5px] py-2 px-0 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
                                         <SingleBrowseCategory category={category}/>
                                     </li>
                                 ))
@@ -243,8 +243,8 @@ const HeaderBottom = () => {
                         <FaHeadset  className='text-3xl xl:text-4xl 2xl:text-4xl text-[#252525]'/>
                     </div>
                     <div>
-                    <h3 className='text-[#258751] text-2xl font-bold'>1900 - 888</h3>
-                    <h4 className='text-[#4c4c4c] text-[11px] font-medium -mt-2'>24/7 Support Center</h4>
+                    <h3 className='text-[#258751] lg:text-md xl:text-2xl font-bold whitespace-nowrap'>1900 - 888</h3>
+                    <h4 className='text-[#4c4c4c] text-[11px] font-medium -mt-2 whitespace-nowrap'>24/7 Support Center</h4>
                     </div>
                 </div>
             </div>

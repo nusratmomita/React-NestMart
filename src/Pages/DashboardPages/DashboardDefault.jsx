@@ -94,9 +94,9 @@ const DashboardDefault = () => {
                             <h4 className='text-right text-[22px] font-bold '>$2,034</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4 py-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4 className='whitespace-nowrap text-xl font-semibold text-[#1d8751]'>40% <span className='text-[12px] text-gray-500'>Up then last year</span></h4>
+                        <h4 className='whitespace-nowrap text-md font-semibold text-[#1d8751]'>40% <span className=' text-gray-500'>Up then last year</span></h4>
                     </div>
                 </div>
 
@@ -110,9 +110,9 @@ const DashboardDefault = () => {
                             <h4 className='text-right text-[22px] font-bold '>$4,000</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4 py-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4 className='whitespace-nowrap text-xl font-semibold text-[#1d8751]'>60% <span className='text-[12px] text-gray-500'>Up then last year</span></h4>
+                        <h4 className='whitespace-nowrap text-md font-semibold text-[#1d8751]'>60% <span className=' text-gray-500'>Up then last year</span></h4>
                     </div>
                 </div>
 
@@ -126,9 +126,9 @@ const DashboardDefault = () => {
                             <h4 className='text-right text-[22px] font-bold '>200</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4 py-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4 className='whitespace-nowrap text-xl font-semibold text-[#1d8751]'>20% <span className='text-[12px] text-gray-500'>Up then last year</span></h4>
+                        <h4 className='whitespace-nowrap text-md font-semibold text-[#1d8751]'>20% <span className=' text-gray-500'>Up then last year</span></h4>
                     </div>
                 </div>
 
@@ -142,9 +142,9 @@ const DashboardDefault = () => {
                             <h4 className='text-right text-[22px] font-bold '>40%</h4>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4'>
+                    <div className='flex justify-center items-center gap-2 bg-gray-100 mx-2 mb-4 py-2'>
                         <FaCaretUp className='text-[#258751]'/>
-                        <h4 className='whitespace-nowrap text-xl font-semibold text-[#1d8751]'>30% <span className='text-[12px] text-gray-500'>Up then last year</span></h4>
+                        <h4 className='whitespace-nowrap text-md font-semibold text-[#1d8751]'>30% <span className=' text-gray-500'>Up then last year</span></h4>
                     </div>
                 </div>
             </div>
@@ -154,48 +154,48 @@ const DashboardDefault = () => {
                     Product Prices Overview
                 </h2>
 
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" className=" pb-5 -ml-7" >
                     <LineChart data={formattedData}>
 
-                    <defs>
-                        <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#258751" stopOpacity={0.3}/>
-                            <stop offset="95%" stopColor="#258751" stopOpacity={0}/>
-                        </linearGradient>
-                    </defs>
+                        <defs>
+                            <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#258751" stopOpacity={0.3}/>
+                                <stop offset="95%" stopColor="#258751" stopOpacity={0}/>
+                            </linearGradient>
+                        </defs>
 
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                        <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
 
-                    <XAxis 
-                        dataKey="name"
-                        tick={{ fill: "#6b7280", fontSize: 12 }}
-                        axisLine={false}
-                        tickLine={false}
-                    />
+                        <XAxis 
+                            dataKey="name"
+                            tick={{ fill: "#6b7280", fontSize: 12 }}
+                            axisLine={false}
+                            tickLine={false}
+                        />
 
-                    <YAxis 
-                        tick={{ fill: "#6b7280", fontSize: 12 }}
-                        axisLine={false}
-                        tickLine={false}
-                    />
+                        <YAxis 
+                            tick={{ fill: "#6b7280", fontSize: 12 }}
+                            axisLine={false}
+                            tickLine={false}
+                        />
 
-                    <Tooltip 
-                        contentStyle={{
-                        backgroundColor: "#fff",
-                        borderRadius: "10px",
-                        border: "1px solid #eee",
-                        }}
-                        formatter={(value) => [`$${value}`, "Price"]}
-                    />
+                        <Tooltip 
+                            contentStyle={{
+                            backgroundColor: "#fff",
+                            borderRadius: "10px",
+                            border: "1px solid #eee",
+                            }}
+                            formatter={(value) => [`$${value}`, "Price"]}
+                        />
 
-                    <Line 
-                        type="monotone"
-                        dataKey="price"
-                        stroke="#258751"
-                        strokeWidth={3}
-                        dot={{ r: 4 }}
-                        activeDot={{ r: 6 }}
-                    />
+                        <Line 
+                            type="monotone"
+                            dataKey="price"
+                            stroke="#258751"
+                            strokeWidth={3}
+                            dot={{ r: 4 }}
+                            activeDot={{ r: 6 }}
+                        />
 
                     </LineChart>
                 </ResponsiveContainer>
@@ -214,72 +214,72 @@ const DashboardDefault = () => {
                     </div>
                     :
                     <>
-                    <div className='mx-5 lg:mx-5 overflow-x-auto'>
-                        <table className="table w-full table-zebra mt-5 border border-gray-500 rounded-sm p-2">
-                        <thead>
-                        <tr>
-                            <th className="p-3 text-center">Image</th>
-                            <th className="p-3 text-center">Product</th>
-                            <th className="p-3 text-center">Price</th>
-                            <th className="p-3 text-center">Quantity</th>
-                            <th className="p-3 text-center">Added On</th>
-                            <th className='p-3 text-center'>Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            {
-                            cartItems.map((item) => (
-                            <tr key={item.productId} className='text-center'>
-                                <td className="p-3">
-                                    <span className='flex justify-center items-center'>
-                                        <img
-                                            src={item.productImage}
-                                            alt={item.productImage}
-                                            className="w-12 h-12 object-cover rounded border-none"
-                                        />
-                                    </span>
-                                </td>
-
-                                <td className="p-3 font-semibold text-[#253D4E] truncate" title={item?.productName}>
-                                    {item.productName} 
-                                </td>
-
-
-                                <td className="p-3">
-                                    <span className="text-[#253D4E] font-bold">
-                                        ${item.productPrice}
-                                    </span>
-                                </td>
-
-                                <td className='text-lg text-center whitespace-nowrap'>
-                                    <div className='flex justify-center items-center gap-2 whitespace-nowrap'>
-                                        <span>
-                                            <FiMinus onClick={() => updateQuantity(item.productId , "decrease")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FiMinus>
+                    <div className=' overflow-x-auto'>
+                        <table className="table w-full table-zebra mt-5 border border-gray-500 rounded-sm p-2 mb-3 ml-0">
+                            <thead>
+                                <tr>
+                                    <th className="p-3 text-center">Image</th>
+                                    <th className="p-3 text-left">Product</th>
+                                    <th className="p-3 text-center">Price</th>
+                                    <th className="p-3 text-center">Quantity</th>
+                                    <th className="p-3 text-center">Added On</th>
+                                    <th className='p-3 text-center'>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                cartItems.map((item) => (
+                                <tr key={item.productId} className='text-center'>
+                                    <td className="p-3">
+                                        <span className='flex justify-center items-center'>
+                                            <img
+                                                src={item.productImage}
+                                                alt={item.productImage}
+                                                className="w-12 h-12 object-cover rounded border-none"
+                                            />
                                         </span>
-                                        <span>{item.productQuantity}</span>
-                                        <span>
-                                            <FaPlus onClick={() => updateQuantity(item.productId , "increase")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FaPlus>
-                                        </span>
-                                    </div>
-                                </td>
+                                    </td>
 
-                                <td className="p-3">
-                                    <span className="text-[#253D4E] font-bold">
-                                        {item.added_time}
-                                    </span>
-                                </td>
-                            
-                                <td className="text-lg flex gap-2 justify-center items-center whitespace-nowrap">
-                                    <Button buttonText="Delete" iconPosition='left' variant="primary" Icon={IoTrashBinOutline} onClick={() => handleDelete(item.productId)}></Button>
-                                </td>
+                                    <td className="p-3 font-semibold text-[#253D4E] truncate text-left" title={item?.productName}>
+                                        {item.productName} 
+                                    </td>
+
+
+                                    <td className="p-3">
+                                        <span className="text-[#253D4E] font-bold">
+                                            ${item.productPrice}
+                                        </span>
+                                    </td>
+
+                                    <td className='text-lg text-center whitespace-nowrap'>
+                                        <div className='flex justify-center items-center gap-2 whitespace-nowrap'>
+                                            <span>
+                                                <FiMinus onClick={() => updateQuantity(item.productId , "decrease")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FiMinus>
+                                            </span>
+                                            <span>{item.productQuantity}</span>
+                                            <span>
+                                                <FaPlus onClick={() => updateQuantity(item.productId , "increase")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FaPlus>
+                                            </span>
+                                        </div>
+                                    </td>
+
+                                    <td className="p-3">
+                                        <span className="text-[#253D4E] font-bold">
+                                            {item.added_time}
+                                        </span>
+                                    </td>
+                                
+                                    <td className="text-lg flex gap-2 justify-center items-center whitespace-nowrap">
+                                        <Button buttonText="Delete" iconPosition='left' variant="primary" Icon={IoTrashBinOutline} onClick={() => handleDelete(item.productId)}></Button>
+                                    </td>
+                                </tr>
+                                )
+                                )}
+                            <tr className="font-bold text-lg bg-gray-200">
+                                <td colSpan="1" className="text-left">Total</td>
+                                <td colSpan="5" className="text-right">${totalPrice}</td>
                             </tr>
-                            )
-                            )}
-                        <tr className="font-bold text-lg bg-gray-200">
-                            <td colSpan="1" className="text-left">Total</td>
-                            <td colSpan="5" className="text-right">${totalPrice}</td>
-                        </tr>
-                        </tbody>
+                            </tbody>
                         </table>
                     </div>
                     </>

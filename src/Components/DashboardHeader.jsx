@@ -20,7 +20,7 @@ const DashboardHeader = () => {
   return (
     <div className='bg-white p-2 border-b border-[#e6e6e6] lg:flex justify-between items-center hidden px-5'>
       <div className='flex gap-3 items-center bg-[#f8f7fa] p-2 relative w-40 lg:w-50 rounded-2xl'>
-        <CiSearch className='text-gray-600'/>
+        <CiSearch className='text-gray-600 text-[24px]'/>
         <input
           type="text"
           placeholder='Search For Items...'
