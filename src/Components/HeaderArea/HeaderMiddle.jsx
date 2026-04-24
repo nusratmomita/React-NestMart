@@ -107,13 +107,13 @@ const HeaderMiddle = () => {
                               setSuggestions([]);
                             }}
                           >
-                            <span className='flex items-center gap-2'>
-                              <img className='w-10 h-10 rounded-full object-cover' src={item.image} alt="product image" />
+                            <div className='flex items-center gap-2'> 
+                              <img className='w-10 h-10 rounded-full object-cover' src={item.image} alt={item.product_name} />
                               <div>
-                                <h4 className='text-gray-700 font-semibold text-lg'>{item.product_name}</h4>
-                                <h4 className='text-gray-600 font-semibold text-md'>${item.current_price}</h4>
+                                <h4 className='text-gray-700 font-semibold text-md'>{item.product_name}</h4>
+                                <p className='text-gray-500 font-semibold text-md'>${item.current_price}</p>
                               </div>
-                            </span>
+                            </div>
                           </li>
                         ))}
                       </ul>
