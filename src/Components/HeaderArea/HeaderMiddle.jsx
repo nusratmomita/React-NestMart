@@ -59,7 +59,7 @@ const HeaderMiddle = () => {
 
             <div className='flex items-center justify-between w-full xl:gap-5 2xl:gap-10'>
 
-              <div className='flex items-center gap-3 lg:gap-1 xl:gap-5'>
+              <div className='flex items-center gap-3 lg:gap-1 xl:gap-15'>
                 <label htmlFor="my-drawer" className="lg:hidden text-2xl cursor-pointer">
                   ☰
                 </label>
@@ -68,7 +68,7 @@ const HeaderMiddle = () => {
                   <img className='max-w-36 w-full cursor-pointer' src={siteLogo} alt="logo" />
                 </a>
 
-                <div className='hidden lg:flex justify-between items-center relative w-70 lg:w-100 xl:w-150 2xl:w-170 border border-[#1D8751] rounded-sm pt-3 pl-5 pb-3'>
+                <div className='hidden lg:flex justify-between items-center relative w-70 lg:w-90 xl:w-150 2xl:w-170 border border-[#1D8751] rounded-sm pt-3 pl-5 pb-3'>
                   <div className='flex items-center'>
                     {/* category dropdown */}
                     <div className='w-40 flex items-center cursor-pointer'>
@@ -87,12 +87,15 @@ const HeaderMiddle = () => {
                       </select>
                       <RiArrowDownWideFill  className=" text-gray-500 pointer-events-none" />
                     </div>
-                    <hr className='bg-[#8a8a8a] h-4 w-px'/>
+
+                    <hr className='bg-[#8a8a8a] h-4 w-px 2xl:mr-3'/>
+                    
                     <input type="text"
                       placeholder="Search For Items..."
                       value={searchTerm}
                       onChange={handleSearch}
-                      className="text-grey-500 focus:outline-none ml-4"/>
+                      className="text-grey-500 focus:outline-none ml-2 lg:w-40 xl:w-100"/>
+                      
                       {suggestions.length > 0 && (
                       <ul className="absolute top-full left-0 w-full bg-white border border-gray-200 shadow-md z-50 max-h-60 overflow-y-auto">
                         {suggestions.map((item) => (
@@ -104,13 +107,19 @@ const HeaderMiddle = () => {
                               setSuggestions([]);
                             }}
                           >
-                            {item.product_name}
+                            <span className='flex items-center gap-2'>
+                              <img className='w-10 h-10 rounded-full object-cover' src={item.image} alt="product image" />
+                              <div>
+                                <h4 className='text-gray-700 font-semibold text-lg'>{item.product_name}</h4>
+                                <h4 className='text-gray-600 font-semibold text-md'>${item.current_price}</h4>
+                              </div>
+                            </span>
                           </li>
                         ))}
                       </ul>
                     )}
                   </div>
-                  <IoSearchOutline className='mr-3 text-[#1d8751] text-2xl cursor-pointer'/>
+                  <IoSearchOutline className='mr-3 text-[#1d8751] text-2xl cursor-pointer inline-block'/>
                 </div>
               </div>
 
