@@ -1,4 +1,4 @@
-/*  border-3 md:border-black lg:border-red-900 xl:border-blue-900 2xl:border-purple-800 */
+/*  border-3 border-violet-900 md:border-black lg:border-red-900 xl:border-blue-900 2xl:border-purple-800 */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 @import "tailwindcss";
@@ -45,6 +45,44 @@
 
 .hide{
   display: none;
+}
+
+
+/* for removing default arrows */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="range"] {
+  pointer-events: none;
+}
+
+/* Enable thumb interaction */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  border: 2px solid #1d8751;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+  height: 16px;
+  width: 16px;
+  background: #0A400C;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (max-width: 479px){

@@ -92,15 +92,15 @@ const Footer = () => {
   return (
     <div className='container'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5 px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-0'>
-        <div className='mt-5 2xl:mt-15 ww-[300px]'>
-          <img className='max-w-[50%] w-full' src={siteLogo} alt="siteLogo" />
+        <div className='mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-15'>
+          <img className='max-w-[35%] lg:max-w-[50%] w-full' src={siteLogo} alt="siteLogo" />
           <p className='text-[#253D4E] font-medium text-[16px] mt-5'>Awesome grocery store website <br /> template</p>
           <div className='mt-5 space-y-2 2xl:space-y-3'>
-            <div className='flex flex-row md:flex-col lg:flex-col 2xl:flex-col gap-1'>
+            <div className='flex flex-col md:flex-col lg:flex-col 2xl:flex-col gap-1'>
               <div className='flex'>
                 <CiLocationOn className='text-[#1d8751] text-2xl mr-1'/>
                 <h4 className='text-black font-bold text-[14px]'>Address: </h4>
-                <span className='text-black font-medium text-[14px] whitespace-nowrap'>5171 W Campbell Ave undefined</span>
+                <span className='text-black font-medium text-[14px]'>5171 W Campbell Ave undefined</span>
               </div>
               <div className='flex flex-col'>
                 <span className='text-black font-medium text-[14px]'>Kent, Utah 53127 United States</span>
@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='mt-5 2xl:mt-15 xl:ml-10'>
+        <div className='mt-5 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-15 xl:ml-10'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Company</h3>
           <ul>
             {
@@ -145,7 +145,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-5 2xl:mt-15'>
+        <div className='mt-5 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Categories</h3>
           <ul>
             {
@@ -160,7 +160,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-5 2xl:mt-15'>
+        <div className='mt-5 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Information</h3>
           <ul>
             {
@@ -175,7 +175,7 @@ const Footer = () => {
           </ul>
         </div>  
 
-        <div className='mt-5 2xl:mt-15'>
+        <div className='mt-5 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-15'>
           <h3 className='text-[#253d4e] text-[24px] font-semibold mb-5'>Install App</h3>
           <p className='text-black font-medium text-[16px]'>From App Store or Google Play</p>
           <div className='mt-5 flex'>

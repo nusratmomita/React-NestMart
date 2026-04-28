@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import Layout from "../Layout/Layout";
 import DashboardLayout from "../Layout/DashboardLayout";
 import DashboardDefault from "../Pages/DashboardPages/DashboardDefault";
+import Shop from "../Pages/Shop/Shop";
 
 
 export const router = createBrowserRouter([
@@ -14,6 +15,11 @@ export const router = createBrowserRouter([
                 index: true,
                 loader: () => fetch("/JsonData/PopularProducts.json"),
                 Component: Home
+            },
+            {
+                path: "/shop",
+                loader: () => fetch("/JsonData/ShopPageData.json"),
+                Component: Shop
             }
         ]
     },

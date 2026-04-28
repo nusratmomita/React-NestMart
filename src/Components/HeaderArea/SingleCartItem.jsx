@@ -18,7 +18,7 @@ const SingleCartItem = ({item}) => {
                 <h4 className='text-gray-600 font-semibold truncate w-34 md:w-32 lg:w-34 xl:w-45' title={item.productName}>{item.productName}</h4>
                 <h5 className='text-gray-600 font-medium'>{item.productQuantity} X ${item.productPrice}</h5>
             </div>
-            <button onClick={() => handleDelete(item.productId)} className='hidden lg:block'>
+            <button onClick={() => handleDelete(item.productId)} className='hidden lg:block ml-4'>
                 <RxCross2 className='text-gray-600 cursor-pointer'/>
             </button>
         </div>

@@ -7,10 +7,8 @@ import DealsOfTheDay from '../Components/DealsOfTheDay/DealsOfTheDay'
 import FourTypesProduct from '../Components/FourCategories/FourTypesProduct'
 import ShopByCategory from '../Components/ShopByCategory/ShopByCategory'
 import Testimonials from '../Components/Testimonial/Testimonials'
-import Features from '../Components/Features/Features'
 import DemoProductSingleCard from '../Components/DemoProducts/DemoProductSingleCard'
 import DemoProducts from '../Components/DemoProducts/DemoProducts'
-import Newsletter from '../Components/Newletter/Newsletter'
 
 const Home = () => {
     const popularProducts = useLoaderData();
@@ -48,8 +46,6 @@ const Home = () => {
         <FourTypesProduct/>
         <ShopByCategory/>
         <Testimonials/>
-        <Newsletter/>
-        <Features/>
 
         {showTop && (
           <button

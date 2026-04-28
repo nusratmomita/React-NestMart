@@ -5,6 +5,7 @@ import { images } from '../../Data/config';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaHeadset } from "react-icons/fa";
 import SingleBrowseCategory from './SingleBrowseCategory';
+import { NavLink } from 'react-router';
 
 const HeaderBottom = () => {
 
@@ -23,25 +24,6 @@ const HeaderBottom = () => {
         },
         {
             homeName: "Home 4",
-            href: "#"
-        }
-    ]
-
-    const shopOptions = [
-        {
-            shopName: "Shop 1",
-            href: "#"
-        },
-        {
-            shopName: "Shop 2",
-            href: "#"
-        },
-        {
-            shopName: "Shop 3",
-            href: "#"
-        },
-        {
-            shopName: "Shop 4",
             href: "#"
         }
     ]
@@ -148,10 +130,10 @@ const HeaderBottom = () => {
                                 <button className='flex justify-between items-center gap-2 px-5 py-2 cursor-pointer whitespace-nowrap' ><RxDashboard/> Browse All Categories <RiArrowDownWideLine/> </button>
                             </div>
                         </div>
-                        <ul className="hidden group-hover:grid grid-cols-2 gap-4 absolute left-0 top-full menu bg-base-100 rounded-box z-999 w-140 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
+                        <ul className="hidden group-hover:grid grid-cols-2 gap-4 absolute left-0 top-full menu bg-base-100 rounded-box z-999 w-120 p-4 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent border border-[#1d8751]">
                             {
                                 browseCategories.map((category,index) => (
-                                    <li key={index} className='border border-[#f2f3f4] cursor-pointer rounded-[5px] py-2 px-0 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
+                                    <li key={index} className='border border-[#f2f3f4] cursor-pointer rounded-[5px] py-2 px-0 flex flex-row justify-center items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
                                         <SingleBrowseCategory category={category}/>
                                     </li>
                                 ))
@@ -165,7 +147,7 @@ const HeaderBottom = () => {
                             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                                 {
                                     homeOptions.map((home,index) => (
-                                        <li key={index}>
+                                        <li key={index} className='hover:text-[#1d8751] hover:ml-2 transition-all duration-300'>
                                             <a href={home.href}>
                                                 {home.homeName}
                                             </a>
@@ -175,19 +157,8 @@ const HeaderBottom = () => {
                             </ul>
                         </div>
 
-                        <div className="dropdown dropdown-hover text-[13px] cursor-pointer">
-                            <div tabIndex={0} role="button" className="flex items-center gap-1 text-[#000000] font-semibold text-[17px]">Shop <MdKeyboardArrowDown></MdKeyboardArrowDown > </div>
-                            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
-                                {
-                                    shopOptions.map((shop,index) => (
-                                        <li key={index}>
-                                            <a href={shop.href}>
-                                                {shop.shopName}
-                                            </a>
-                                        </li>
-                                    ))
-                                }
-                            </ul>
+                        <div className=" text-[13px] cursor-pointer">
+                            <NavLink to="/shop" className="flex items-center gap-1 text-[#000000] font-semibold text-[17px]">Shop </NavLink>
                         </div>
 
                         <div className="dropdown dropdown-hover text-[13px] cursor-pointer">
@@ -195,7 +166,7 @@ const HeaderBottom = () => {
                             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                                 {
                                     storeOptions.map((store,index) => (
-                                        <li key={index}>
+                                        <li key={index} className='hover:text-[#1d8751] hover:ml-2 transition-all duration-300'>
                                             <a href={store.href}>
                                                 {store.storeName}
                                             </a>
@@ -210,7 +181,7 @@ const HeaderBottom = () => {
                             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                                 {
                                     productOptions.map((product,index) => (
-                                        <li key={index}>
+                                        <li key={index} className='hover:text-[#1d8751] hover:ml-2 transition-all duration-300'>
                                             <a href={product.href}>
                                                 {product.productName}
                                             </a>
@@ -225,7 +196,7 @@ const HeaderBottom = () => {
                             <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
                                 {
                                     blogOptions.map((blog,index) => (
-                                        <li key={index}>
+                                        <li key={index} className='hover:text-[#1d8751] hover:ml-2 transition-all duration-300'>
                                             <a href={blog.href}>
                                                 {blog.blogName}
                                             </a>

@@ -45,159 +45,140 @@ const ResponsiveHeader = () => {
           languageName: "French",
           href: "#"
       }
-    ]
+  ]
   
-    const currencyDropdown = [
-      {
-          currencyName: "Taka",
-          href: "#"
-      },
-      {
-          currencyName: "Riyal",
-          href: "#"
-      },
-      {
-          currencyName: "Euro",
-          href: "#"
-      },
-      {
-          currencyName: "Penny",
-          href: "#"
-      }
-    ]
-  
-    const homeOptions = [
-      {
-        homeName: "Home 1",
+  const currencyDropdown = [
+    {
+        currencyName: "Taka",
         href: "#"
-      },
-      {
-        homeName: "Home 2",
+    },
+    {
+        currencyName: "Riyal",
         href: "#"
-      },
-      {
-        homeName: "Home 3",
+    },
+    {
+        currencyName: "Euro",
         href: "#"
-      },
-      {
-        homeName: "Home 4",
+    },
+    {
+        currencyName: "Penny",
         href: "#"
-      }
-    ]
-  
-    const shopOptions = [
-      {
-        shopName: "Shop 1",
-        href: "#"
-      },
-      {
-        shopName: "Shop 2",
-        href: "#"
-      },
-      {
-        shopName: "Shop 3",
-        href: "#"
-      },
-      {
-        shopName: "Shop 4",
-        href: "#"
-      }
-    ]
-  
-    const storeOptions = [
-      {
-        storeName: "Store 1",
-        href: "#"
-      },
-      {
-        storeName: "Store 2",
-        href: "#"
-      },
-      {
-        storeName: "Store 3",
-        href: "#"
-      },
-      {
-        storeName: "Store 4",
-        href: "#"
-      }
-    ]
-  
-    const productOptions = [
-      {
-        productName: "Product 1",
-        href: "#"
-      },
-      {
-        productName: "Product 2",
-        href: "#"
-      },
-      {
-        productName: "Product 3",
-        href: "#"
-      },
-      {
-        productName: "Product 4",
-        href: "#"
-      }
-    ]
-  
-    const blogOptions = [
-      {
-        blogName: "Blog 1",
-        href: "#"
-      },
-      {
-        blogName: "Blog 2",
-        href: "#"
-      },
-      {
-        blogName: "Blog 3",
-        href: "#"
-      },
-      {
-        blogName: "Blog 4",
-        href: "#"
-      }
-    ]
-  
-    const browseCategories = [
-      {
-        image: images.category1,
-        categoryName: "Milks & Diaries"
-      },
-      {
-        image: images.category2,
-        categoryName: "Cold Drinks"
-      },
-      {
-        image: images.category3,
-        categoryName: "Pet Foods"
-      },
-      {
-        image: images.category4,
-        categoryName: "Diet Foods"
-      },
-      {
-        image: images.category5,
-        categoryName: "Vegetable"
-      },
-      {
-        image: images.category6,
-        categoryName: "Baking Materials"
-      },
-      {
-        image: images.category7,
-        categoryName: "Pet Toys"
-      },
-      {
-        image: images.category8,
-        categoryName: "Fruits"
-      }
-  
-    ]
-  
-    const toggleMenu = (menu) => {
+    }
+  ]
+
+  const homeOptions = [
+    {
+      homeName: "Home 1",
+      href: "#"
+    },
+    {
+      homeName: "Home 2",
+      href: "#"
+    },
+    {
+      homeName: "Home 3",
+      href: "#"
+    },
+    {
+      homeName: "Home 4",
+      href: "#"
+    }
+  ]
+
+  const storeOptions = [
+    {
+      storeName: "Store 1",
+      href: "#"
+    },
+    {
+      storeName: "Store 2",
+      href: "#"
+    },
+    {
+      storeName: "Store 3",
+      href: "#"
+    },
+    {
+      storeName: "Store 4",
+      href: "#"
+    }
+  ]
+
+  const productOptions = [
+    {
+      productName: "Product 1",
+      href: "#"
+    },
+    {
+      productName: "Product 2",
+      href: "#"
+    },
+    {
+      productName: "Product 3",
+      href: "#"
+    },
+    {
+      productName: "Product 4",
+      href: "#"
+    }
+  ]
+
+  const blogOptions = [
+    {
+      blogName: "Blog 1",
+      href: "#"
+    },
+    {
+      blogName: "Blog 2",
+      href: "#"
+    },
+    {
+      blogName: "Blog 3",
+      href: "#"
+    },
+    {
+      blogName: "Blog 4",
+      href: "#"
+    }
+  ]
+
+  const browseCategories = [
+    {
+      image: images.category1,
+      categoryName: "Milks & Diaries"
+    },
+    {
+      image: images.category2,
+      categoryName: "Cold Drinks"
+    },
+    {
+      image: images.category3,
+      categoryName: "Pet Foods"
+    },
+    {
+      image: images.category4,
+      categoryName: "Diet Foods"
+    },
+    {
+      image: images.category5,
+      categoryName: "Vegetable"
+    },
+    {
+      image: images.category6,
+      categoryName: "Baking Materials"
+    },
+    {
+      image: images.category7,
+      categoryName: "Pet Toys"
+    },
+    {
+      image: images.category8,
+      categoryName: "Fruits"
+    }
+
+  ]
+
+  const toggleMenu = (menu) => {
       setOpenMenu(openMenu === menu ? null : menu);
     };
 
@@ -244,7 +225,7 @@ const ResponsiveHeader = () => {
                     <ul className='mt-2 space-y-2 flex flex-col items-center'>
                       {
                         browseCategories.map((category,index) => (
-                            <li key={index} className='border border-[#f2f3f4] w-full cursor-pointer rounded-[5px] py-2.25 px-4.5 flex flex-row items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
+                            <li key={index} className='border border-[#f2f3f4] w-full cursor-pointer rounded-[5px] py-2.25 px-4.5 flex flex-row justify-center items-center hover:bg-white hover:shadow-[5px_5px_15px_rgba(0,0,0,0.05)] hover:border-[#1d8751]'>
                               <SingleBrowseCategory category={category}/>
                             </li>
                         ))
@@ -291,35 +272,7 @@ const ResponsiveHeader = () => {
               <hr className='border-t border-gray-300 my-3'/>
 
               <li>
-                <div 
-                  onClick={() => toggleMenu("shop")}
-                  className='flex justify-between items-center cursor-pointer'
-                >
-                  <div className='flex items-center gap-2 font-semibold'>
-                    {
-                      openMenu === "shop" ? <span className='text-[#1d8751] font-semibold'>Shop</span> : <span>Shop</span>
-                    }
-                  </div>
-
-                  {openMenu === "shop" 
-                    ? <FaChevronUp className='text-[#707070]' /> 
-                    : <FaChevronDown className='text-[#707070]' />}
-                </div>
-
-                <ul
-                  className={`ml-6 space-y-2 overflow-hidden transition-all duration-300 ease-in-out 
-                  ${openMenu === "shop" ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}`}
-                >
-                {
-                  shopOptions.map((shop,index) => (
-                      <li key={index}>
-                          <a href={shop.href}>
-                              {shop.shopName}
-                          </a>
-                      </li>
-                  ))
-                }
-                </ul>
+                <NavLink to="/shop" className="flex items-center gap-1 text-[#000000] font-semibold text-[17px]">Shop </NavLink>
               </li>
 
               <hr className='border-t border-gray-300 my-3'/>
@@ -554,6 +507,7 @@ const ResponsiveHeader = () => {
               <li className='flex items-center gap-2'><RiHeadphoneLine className='text-[#1d8751]'/> 1900-888</li>
             </ul>
           </div>
+
           <div className='mt-4 mb-4'>
             <h4 className='font-bold mb-3'>Follow Us</h4>
             <div className='flex gap-2'>

@@ -41,7 +41,7 @@ const TopSelling = () => {
         }
     ]
     return (
-        <div className='mt-10 md:mt-10 lg:mt-10 xl:mt-0'>
+        <div className='mt-5 md:mt-10 lg:mt-10 xl:mt-0'>
             <h3 className='text-[20px] md:text-[24px] lg:text-[24px] 2xl:text-[24px] font-bold text-[#253D4E] section_title'>Top Selling</h3>
             <div className='mt-5 space-y-5'>
                 {

@@ -157,7 +157,7 @@ const DashboardLayout = () => {
 
           <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay overflow-y-scroll"></label>
 
-          <ul className="menu bg-white text-md min-h-full w-80 lg:w-60 p-4 flex flex-col justify-between [&>li>*]:!border-none"> 
+          <ul className="menu bg-white text-md min-h-full w-60 lg:w-60 p-4 flex flex-col justify-between [&>li>*]:border-none!"> 
             <div>
               {/* this one manages opening and closing the drawer */}
               <label htmlFor="my-drawer-2" className="cursor-pointer block lg:hidden">
@@ -168,8 +168,8 @@ const DashboardLayout = () => {
                   <img className='w-[40%]' src={siteLogo} alt="siteLogo" />
               </li>
 
-              <li className='flex gap-3 items-center bg-[#f8f7fa] p-2 relative w-full my-3 rounded-2xl lg:hidden'>
-                <CiSearch className='text-gray-600'/>
+              <li className='flex gap-3 items-center bg-[#f8f7fa] p-2 w-full my-3 rounded-md lg:hidden'>
+                <CiSearch className='text-gray-600 hidden lg:block'/>
                 <input
                   type="text"
                   placeholder='Search For Items...'

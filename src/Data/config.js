@@ -51,5 +51,6 @@ export const images = {
     category13,
     demoProductImage1,
     demoProductImage2,
-    demoProductImage3
+    demoProductImage3,
+    
 }

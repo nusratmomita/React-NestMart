@@ -86,7 +86,7 @@ const Banner = () => {
                         </div>
 
                     </div>
-                    <div className='hidden lg:w-[45%] xl:w-[45%] 2xl:w-[45%] lg:block xl:block 2xl:block lg:mr-5 '>
+                    <div className='hidden lg:w-[35%] xl:w-[35%] 2xl:w-[35%] lg:block xl:block 2xl:block'>
                         <div className='banner_three rounded-[10px] pt-35 pb-52 pl-13'>
                             <h3 className='text-[24px] text-[#253d4e] font-bold transform transition duration-300 hover:-translate-y-3 cursor-pointer'>Delivered to your home</h3>
                             <div className='mt-22 '>

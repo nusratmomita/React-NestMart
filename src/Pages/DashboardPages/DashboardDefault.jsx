@@ -149,7 +149,7 @@ const DashboardDefault = () => {
                 </div>
             </div>
 
-            <div className="w-full h-100 bg-white p-6 rounded-2xl shadow-md mt-10 pb-10 border border-gray-100">
+            <div className="w-full h-100 bg-white p-6 rounded-2xl shadow-md mt-10 pb-10 border border-gray-100 ">
                 <h2 className="text-lg font-semibold text-[#253D4E] mb-4">
                     Product Prices Overview
                 </h2>
@@ -214,8 +214,8 @@ const DashboardDefault = () => {
                     </div>
                     :
                     <>
-                    <div className=' overflow-x-auto'>
-                        <table className="table w-full table-zebra mt-5 border border-gray-500 rounded-sm p-2 mb-3 ml-0">
+                    <div className='overflow-x-auto'>
+                        <table className="table w-full table-zebra my-5 border border-gray-300 rounded-sm p-2 mb-3 ml-0">
                             <thead>
                                 <tr>
                                     <th className="p-3 text-center">Image</th>
@@ -230,7 +230,7 @@ const DashboardDefault = () => {
                                 {
                                 cartItems.map((item) => (
                                 <tr key={item.productId} className='text-center'>
-                                    <td className="p-3">
+                                    <td className="p-3 border border-transparent">
                                         <span className='flex justify-center items-center'>
                                             <img
                                                 src={item.productImage}
@@ -240,18 +240,18 @@ const DashboardDefault = () => {
                                         </span>
                                     </td>
 
-                                    <td className="p-3 font-semibold text-[#253D4E] truncate text-left" title={item?.productName}>
+                                    <td className="p-3 font-semibold text-[#253D4E] truncate text-left border border-transparent" title={item?.productName}>
                                         {item.productName} 
                                     </td>
 
 
-                                    <td className="p-3">
+                                    <td className="p-3 border border-transparent">
                                         <span className="text-[#253D4E] font-bold">
                                             ${item.productPrice}
                                         </span>
                                     </td>
 
-                                    <td className='text-lg text-center whitespace-nowrap'>
+                                    <td className='text-lg text-center whitespace-nowrap border border-transparent'>
                                         <div className='flex justify-center items-center gap-2 whitespace-nowrap'>
                                             <span>
                                                 <FiMinus onClick={() => updateQuantity(item.productId , "decrease")} className='bg-gray-200 rounded-sm text-[#253D4E] cursor-pointer text-xl lg:text-2xl p-1'></FiMinus>
@@ -263,13 +263,13 @@ const DashboardDefault = () => {
                                         </div>
                                     </td>
 
-                                    <td className="p-3">
-                                        <span className="text-[#253D4E] font-bold">
+                                    <td className="p-3 border border-transparent">
+                                        <span className="text-[#253D4E] font-bold whitespace-nowrap">
                                             {item.added_time}
                                         </span>
                                     </td>
                                 
-                                    <td className="text-lg flex gap-2 justify-center items-center whitespace-nowrap">
+                                    <td className="text-lg flex gap-2 justify-center items-center whitespace-nowrap border border-transparent">
                                         <Button buttonText="Delete" iconPosition='left' variant="primary" Icon={IoTrashBinOutline} onClick={() => handleDelete(item.productId)}></Button>
                                     </td>
                                 </tr>
