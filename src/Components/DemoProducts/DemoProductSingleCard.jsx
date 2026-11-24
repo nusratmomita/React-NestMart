@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Buttons/Button'
+import Button from '../Button/Button'
 import { TiArrowRight } from "react-icons/ti";
 
 const DemoProductSingleCard = ({demoProduct}) => {

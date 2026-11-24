@@ -36,13 +36,13 @@ const DailyBestSells = ({popularProductsData}) => {
                 320: {slidesPerView: 1},
                 640: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
             }}
           >
             {
               popularProductsData.map((product) => (
                 <SwiperSlide key={product.id}>
-                  <ProductCard product={product} progressBar={true} style1={false} companyName={false} price_side_by_side={true}></ProductCard>
+                  <ProductCard product={product} progressBar={true} style1={false} companyName={false} price_side_by_side={true}/>
                 </SwiperSlide>
               ))
             }

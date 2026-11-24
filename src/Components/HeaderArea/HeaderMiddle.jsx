@@ -15,7 +15,7 @@ import { PiCurrencyCircleDollarLight } from "react-icons/pi";
 import { RiHeadphoneLine } from "react-icons/ri";
 import { useSelector } from 'react-redux';
 import SingleCartItem from './SingleCartItem';
-import Button from "../Buttons/Button";
+import Button from "../Button/Button";
 import { LuFlagTriangleRight } from 'react-icons/lu';
 import SingleBrowseCategory from './SingleBrowseCategory';
 import productData from "../../../public/JsonData/PopularProducts.json";

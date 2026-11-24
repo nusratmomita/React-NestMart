@@ -1,7 +1,7 @@
 import React from 'react'
 import { CiShoppingCart } from 'react-icons/ci';
 import Countdown from 'react-countdown';
-import Button from '../Buttons/Button';
+import Button from '../Button/Button';
 import ReviewStar from '../ReviewStar/ReviewStar';
 import { FiMinus } from 'react-icons/fi';
 import { FaPlus } from "react-icons/fa";

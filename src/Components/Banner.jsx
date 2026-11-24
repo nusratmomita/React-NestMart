@@ -12,7 +12,7 @@ import { Autoplay } from 'swiper/modules';
 import EmailInput from './EmailInput/EmailInput';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight  } from "react-icons/md";
 import { TiArrowRight } from 'react-icons/ti';
-import Button from './Buttons/Button';
+import Button from './Button/Button';
 
 
 const Banner = () => {

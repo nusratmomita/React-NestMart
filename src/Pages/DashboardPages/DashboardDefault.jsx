@@ -13,7 +13,7 @@ import {  decreaseQuantity, increaseQuantity , removeItem } from '../../Features
 import Swal from 'sweetalert2';
 import { FiMinus } from 'react-icons/fi';
 import { IoTrashBinOutline } from 'react-icons/io5';
-import Button from '../../Components/Buttons/Button';
+import Button from '../../Components/Button/Button';
 import { PiShoppingCartBold } from 'react-icons/pi';
 
 const DashboardDefault = () => {

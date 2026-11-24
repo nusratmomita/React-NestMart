@@ -205,7 +205,11 @@ const HeaderBottom = () => {
                                 }
                             </ul>
                         </div>
-                        <div  className="text-[#000000] font-semibold text-[17px] cursor-pointer">FAQ</div>
+                        <div className="dropdown dropdown-hover text-[13px] cursor-pointer">
+                            <div tabIndex={0} role="button" className="flex items-center gap-1 text-[#000000] font-semibold text-[17px]">Mega Menu <MdKeyboardArrowDown></MdKeyboardArrowDown > </div>
+                            <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-9999 w-40 p-2 shadow-sm [&>li>a:hover]:bg-transparent [&>li>a:focus]:bg-transparent">
+                            </ul>
+                        </div>
                         <div  className="text-[#000000] font-semibold text-[17px] cursor-pointer">Contact</div>
                     </div>
                 </div>

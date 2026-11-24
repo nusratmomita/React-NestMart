@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaStar, FaRegStar, FaStarHalfAlt, FaRegEye, FaIdCard } from 'react-icons/fa'
 import { CiShoppingCart } from "react-icons/ci";
-import Button from '../Buttons/Button';
+import Button from '../Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { addItem, decreaseQuantity, increaseQuantity } from '../../Features/CartSlice';
@@ -82,7 +82,7 @@ const ProductCard = ({product,style1,progressBar,companyName,price_side_by_side}
                 <div className='relative'>
                     {
                         product?.image &&
-                        <img src={product.image} alt="product image" className="xl:pl-5 xl:pr-5 w-full block group-hover:hidden cursor-pointer"  />
+                        <img src={product.image} alt="product image" className="xl:pl-5 xl:pr-5 w-full block group-hover:hidden cursor-pointer group-hover:scale-150"  />
                     }
                     {
                         product?.hovered_image &&

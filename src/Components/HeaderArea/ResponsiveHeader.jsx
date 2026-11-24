@@ -17,7 +17,7 @@ import { IoPeopleSharp } from "react-icons/io5";
 import { PiCurrencyCircleDollarLight } from "react-icons/pi";
 import { RiHeadphoneLine } from "react-icons/ri";
 import SingleCartItem from './SingleCartItem';
-import Button from "../Buttons/Button";
+import Button from "../Button/Button";
 import { LuFlagTriangleRight } from 'react-icons/lu';
 import SingleBrowseCategory from './SingleBrowseCategory';
 
